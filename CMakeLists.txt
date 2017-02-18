@@ -18,9 +18,9 @@ add_executable( example_02-08 example_02-08.cpp )
 add_executable( example_02-09 example_02-09.cpp )
 add_executable( example_02-10 example_02-10.cpp )
 add_executable( example_02-11 example_02-11.cpp )
+add_executable( example_16-01 example_16-01.cpp )
 
 target_link_libraries( example_02-01 ${OpenCV_LIBS} )
-#target_link_libraries( example_02-01 opencv_core opencv_highgui opencv_imgcodecs )
 target_link_libraries( example_02-02 ${OpenCV_LIBS} )
 target_link_libraries( example_02-03 ${OpenCV_LIBS} )
 target_link_libraries( example_02-04 ${OpenCV_LIBS} )
@@ -31,6 +31,7 @@ target_link_libraries( example_02-08 ${OpenCV_LIBS} )
 target_link_libraries( example_02-09 ${OpenCV_LIBS} )
 target_link_libraries( example_02-10 ${OpenCV_LIBS} )
 target_link_libraries( example_02-11 ${OpenCV_LIBS} )
+target_link_libraries( example_16-01 ${OpenCV_LIBS} )
 
 
 
