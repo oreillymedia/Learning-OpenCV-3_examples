@@ -1,3 +1,6 @@
+// Example 11-1. An affine transformation.
+// Maps the 3 points (0, 0), (0, height-1), (width-1, 0) specified in srcTri[] to
+// the specified points in array dstTri using a computed Affine Transform. 
 #include <opencv2/opencv.hpp>
 #include <iostream>
 
