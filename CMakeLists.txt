@@ -38,6 +38,7 @@ add_executable( example_12-01 example_12-01.cpp )
 add_executable( example_12-02 example_12-02.cpp )
 add_executable( example_13-01 example_13-01.cpp )
 add_executable( example_13-02 example_13-02.cpp )
+add_executable( example_13-03 example_13-03.cpp )
 add_executable( example_16-01 example_16-01.cpp )
 
 target_link_libraries( example_02-01 ${OpenCV_LIBS} )
@@ -71,6 +72,7 @@ target_link_libraries( example_12-01 ${OpenCV_LIBS} )
 target_link_libraries( example_12-02 ${OpenCV_LIBS} )
 target_link_libraries( example_13-01 ${OpenCV_LIBS} )
 target_link_libraries( example_13-02 ${OpenCV_LIBS} )
+target_link_libraries( example_13-03 ${OpenCV_LIBS} )
 target_link_libraries( example_16-01 ${OpenCV_LIBS} )
 
 
