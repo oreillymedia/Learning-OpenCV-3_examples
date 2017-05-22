@@ -1,7 +1,8 @@
 // Example 10-3. Threshold versus adaptive threshold
 #include <opencv2/opencv.hpp>
-#include <iostream>
 #include <cstdlib>
+#include <iostream>
+
 using namespace std;
 
 int main( int argc, char** argv )
