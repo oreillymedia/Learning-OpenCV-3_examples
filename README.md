@@ -7,7 +7,7 @@ This is the example code that accompanies Learning OpenCV 3 by Adrian Kaehler an
 
 This code is in progress, currently at Chapter 15, bear with us, the code is coming, both Authors are busy, as always, building startups.
 
-Note, for your interest, included here is a Docker file that
+Note, for your interest, included here is a _Docker_ file that
 * Loads Ubuntu 16.04 
 * Loads all dependencies for OpenCV 3.2 and opencv_contrib
 * Loads and builds OpenCV 3.2 and opencv_contrib into a build directory 
