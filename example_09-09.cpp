@@ -1,3 +1,5 @@
+// Example 9-9. The WxMoviePlayer object header file WxMoviePlayer.hpp
+//
 #include "opencv2/opencv.hpp"
 #include "wx/wx.h"
 #include <string>
