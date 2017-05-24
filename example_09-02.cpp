@@ -1,3 +1,4 @@
+// Example 9-2. Toy program for using a mouse to draw boxes on the screen
 #include <opencv2/opencv.hpp>
 // Define our callback which we will install for
 // mouse events
