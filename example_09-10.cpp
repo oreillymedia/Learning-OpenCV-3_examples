@@ -1,3 +1,5 @@
+//Example 9-10. The WxMoviePlayer object source file WxMoviePlayer.cpp
+//This file is incomplete
 #include "WxMoviePlayer.hpp"
 BEGIN_EVENT_TABLE( WxMoviePlayer, wxWindow )
   EVT_PAINT( WxMoviePlayer::OnPaint )
