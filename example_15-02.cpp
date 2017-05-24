@@ -124,6 +124,7 @@ void help(char** argv ) {
 	<< argv[0] <<" <#frames to train on> <avi_path/filename>\n"
 	<< "For example:\n"
 	<< argv[0] << " 50 ../tree.avi\n"
+	<< "'A' or 'a' to adjust thresholds, esc, 'q' or 'Q' to quit"
 	<< endl;
 }
 
