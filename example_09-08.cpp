@@ -1,3 +1,7 @@
+//Example 9-8. An example program which takes a single argument
+//indicating a video file; that video file will be replayed inside of a wxWidgets object that
+//we will define, called WxMoviePlayer
+//
 #include "wx/wx.h"
 #include "WxMoviePlayer.hpp"
 // Application class, the top level object in wxWidgets
