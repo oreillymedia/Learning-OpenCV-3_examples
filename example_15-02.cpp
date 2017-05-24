@@ -26,7 +26,7 @@ cv::Mat Imaskt;
 
 // Thresholds
 //
-float high_thresh = 15.0;  //scaleing the thesholds in backgroundDiff()
+float high_thresh = 15.0;  //scaling the thesholds in backgroundDiff()
 float low_thresh = 13.0;
 
 // Counts number of images learned for averaging later
