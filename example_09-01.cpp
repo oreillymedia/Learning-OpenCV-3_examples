@@ -1,3 +1,4 @@
+// Example 9-10. The WxMoviePlayer object source file WxMoviePlayer.cpp
 #include <opencv2/opencv.hpp>
 
 using namespace std;
