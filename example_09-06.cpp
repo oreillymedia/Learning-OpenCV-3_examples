@@ -1,3 +1,5 @@
+//Example 9-6. The QMoviePlayer object header file QMoviePlayer.hpp
+//
 #include "ui_QMoviePlayer.h"
 #include <opencv2/opencv.hpp>
 #include <string>
