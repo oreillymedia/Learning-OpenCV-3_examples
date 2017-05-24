@@ -1,3 +1,7 @@
+//Example 9-4. Slightly modified code from the OpenCV documentation that draws a
+//cube every frame; this modified version uses the global variables rotx and roty that are
+//connected to the sliders in Figure 9-6
+
 #include <opencv2/opencv.hpp>
 using namespace std;
 
