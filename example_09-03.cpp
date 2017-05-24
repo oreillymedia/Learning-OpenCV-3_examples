@@ -1,3 +1,6 @@
+//Example 9-3. Using a trackbar to create a “switch” that the user can turn on and off;
+//this program plays a video and uses the switch to create a pause functionality
+//
 // An example program in which the user can draw boxes on the screen.
 //
 #include <opencv2/opencv.hpp>
@@ -19,14 +22,14 @@ void switch_callback( int position, void* ) {
     switch_on_function();
   }
 }
-void help() {
-    cout << "Call: my.avi" << endl;
+void help(char ** argv) {
+    cout << "Call: " << argv[0] << " <my.avi>" << endl;
     cout << "Shows putting a pause button in a video." << endl;
 }
 int main( int argc, char** argv ) {
   cv::Mat frame; // To hold movie images
   cv::VideoCapture g_capture;
-  help();
+  help(argv);
   if( argc < 2 || !g_capture.open( argv[1] ) ){
     cout << "Failed to open " << argv[1] << " video file\n" << endl;
     return -1;
@@ -53,7 +56,7 @@ int main( int argc, char** argv ) {
           if( frame.empty() ) break;
           cv::imshow( "Example", frame);
       }
-      if( cv::waitKey(10)==27 ) break;
+      if( cv::waitKey(10)==27 ) break; //esc
   }
   return 0;
 }
