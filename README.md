@@ -1,7 +1,22 @@
-Learning OpenCV 3
-==========
+# Learning OpenCV 3
+
 
 This is the example code that accompanies Learning OpenCV 3 by Adrian Kaehler and Gary Bradski (9781491937990). 
+  
+**In progress May 24, 2017**
+
+This code is in progress, currently at Chapter 15, bear with us, the code is coming, both Authors are busy, as always, building startups.
+
+Note, for your interest, included here is a _Docker_ file that
+* Loads Ubuntu 16.04 
+* Loads all dependencies for OpenCV 3.2 and opencv_contrib
+* Loads and builds OpenCV 3.2 and opencv_contrib into a build directory 
+  * executable files end up in opencv-3.2.0/build/bin
+* Git clones the code (and Docker file) for Learning OpenCV 3 and builds it
+  * executable files end up in Learning_OpenCV-3_examples/build
+* To get to the top level directory, just type: `cd`
+* If you just want to do this "by hand" in your home, replace the "RUN"s below with "sudo"
+
 
 New code is added regularly. We apologize that all of the code from the
 book is not up yet, but it will be uploaded as soon as possible. Please

@@ -13,6 +13,7 @@ using namespace std;
 int g_switch_value = 1;
 void switch_off_function() { cout << "Pause\n"; }; //YOU COULD DO MORE
 void switch_on_function()  { cout << "Run\n"; };
+
 // This will be the callback that we give to the trackbar.
 //
 void switch_callback( int position, void* ) {
@@ -22,6 +23,7 @@ void switch_callback( int position, void* ) {
     switch_on_function();
   }
 }
+
 void help(char ** argv) {
     cout << "Call: " << argv[0] << " <my.avi>" << endl;
     cout << "Shows putting a pause button in a video." << endl;
@@ -34,9 +36,11 @@ int main( int argc, char** argv ) {
     cout << "Failed to open " << argv[1] << " video file\n" << endl;
     return -1;
   }
+
   // Name the main window
   //
   cv::namedWindow( "Example", 1 );
+
   // Create the trackbar. We give it a name,
   // and tell it the name of the parent window.
   //
@@ -47,6 +51,7 @@ int main( int argc, char** argv ) {
     1,
     switch_callback
   );
+
   // This will cause OpenCV to idle until
   // someone hits the Esc key.
   //
@@ -59,4 +64,5 @@ int main( int argc, char** argv ) {
       if( cv::waitKey(10)==27 ) break; //esc
   }
   return 0;
+
 }

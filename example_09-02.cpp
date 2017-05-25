@@ -1,13 +1,17 @@
 // Example 9-2. Toy program for using a mouse to draw boxes on the screen
 #include <opencv2/opencv.hpp>
+
 // Define our callback which we will install for
 // mouse events
 //
 void my_mouse_callback(
-   int event, int x, int y, int flags, void* param
+
+  int event, int x, int y, int flags, void* param
 );
-Rect box;
+cv::Rect box;
 bool drawing_box = false;
+
+
 // A little subroutine to draw a box onto an image
 //
 void draw_box( cv::Mat& img, cv::Rect box ) {
@@ -15,6 +19,7 @@ void draw_box( cv::Mat& img, cv::Rect box ) {
     img,
     box.tl(),
     box.br(),
+
     cv::Scalar(0x00,0x00,0xff)    /* red */
   );
 }
@@ -31,22 +36,22 @@ int main( int argc, char** argv ) {
   image = cv::Scalar::all(0);
   cv::namedWindow( "Box Example" );
  // Here is the crucial moment where we actually install
-  // the callback. Note that we set the value of 'params' to
-  // be the image we are working with so that the callback
-  // will have the image to edit.
-  //
-  cv::setMouseCallback(
-    "Box Example",
-    my_mouse_callback,
-    (void*)&image
-  );
-  // The main program loop. Here we copy the working image
-  // to the temp image, and if the user is drawing, then
-  // put the currently contemplated box onto that temp image.
-  // Display the temp image, and wait 15ms for a keystroke,
-  // then repeat.
-  //
-  for(;;) {
+ // the callback. Note that we set the value of 'params' to
+ // be the image we are working with so that the callback
+ // will have the image to edit.
+ //
+ cv::setMouseCallback(
+   "Box Example",
+   my_mouse_callback,
+   (void*)&image
+ );
+ // The main program loop. Here we copy the working image
+ // to the temp image, and if the user is drawing, then
+ // put the currently contemplated box onto that temp image.
+ // Display the temp image, and wait 15ms for a keystroke,
+ // then repeat.
+ //
+ for(;;) {
     image.copyTo(temp);
     if( drawing_box ) draw_box( temp, box );
     cv::imshow( "Box Example", temp );
@@ -54,6 +59,7 @@ int main( int argc, char** argv ) {
   }
   return 0;
 }
+
 // This is our mouse callback. If the user
 // presses the left button, we start a box.
 // When the user releases that button, then we
@@ -62,7 +68,7 @@ int main( int argc, char** argv ) {
 // resize the box.
 //
 void my_mouse_callback(
-   int event, int x, int y, int flags, void* param) 
+int event, int x, int y, int flags, void* param) 
 {
   cv::Mat& image = *(cv::Mat*) param;
   switch( event ) {
@@ -81,6 +87,7 @@ void my_mouse_callback(
     case cv::EVENT_LBUTTONUP: {
       drawing_box = false;
       if( box.width < 0  ) {
+
         box.x += box.width;
         box.width *= -1;
       }
@@ -92,4 +99,5 @@ void my_mouse_callback(
     }
     break;
   }
+
 }
