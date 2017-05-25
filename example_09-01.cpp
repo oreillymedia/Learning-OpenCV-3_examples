@@ -1,8 +1,10 @@
-// Create a window and display an image in that window.
+
+// Example 9-1. Creating a window and displaying an image in that window
 //
 #include <opencv2/opencv.hpp>
 
 using namespace std;
+
 
 int main(int argc, char** argv) {
 
@@ -27,6 +29,5 @@ int main(int argc, char** argv) {
   // Clean up and don't be piggies
   //
   cv::destroyWindow( argv[1] );
-
   exit(0);
 }
