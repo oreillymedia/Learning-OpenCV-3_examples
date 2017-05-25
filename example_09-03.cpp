@@ -26,8 +26,9 @@ void switch_callback( int position, void* ) {
 
 void help(char ** argv) {
     cout << "Call: " << argv[0] << " <my.avi>" << endl;
-    cout << "Shows putting a pause button in a video." << endl;
+    cout << "Shows putting a pause button in a video; Esc to quit" << endl;
 }
+
 int main( int argc, char** argv ) {
   cv::Mat frame; // To hold movie images
   cv::VideoCapture g_capture;
