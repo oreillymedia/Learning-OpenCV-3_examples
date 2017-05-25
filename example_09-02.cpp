@@ -23,12 +23,12 @@ void draw_box( cv::Mat& img, cv::Rect box ) {
     cv::Scalar(0x00,0x00,0xff)    /* red */
   );
 }
-void help() {
-  std::cout << "Call: ./ch4_ex4_1\n" <<
-    " shows how to use a mouse to draw regions in an image." << std::endl;
+void help(char** argv) {
+  std::cout << "Call: " << argv[0] <<
+    " shows how to use a mouse to draw regions in an image. Esc to quit" << std::endl;
 }
 int main( int argc, char** argv ) {
-  help();
+  help(argv);
   box = cv::Rect(-1,-1,0,0);
   cv::Mat image(200, 200, CV_8UC3), temp;
   image.copyTo(temp);
