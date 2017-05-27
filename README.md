@@ -5,7 +5,7 @@ This is the example code that accompanies Learning OpenCV 3 by Adrian Kaehler an
   
 **In progress May 24, 2017**
 
-This code is in progress, currently at Chapter 15, bear with us, the code is coming, both Authors are busy, as always, building startups.
+This code is in progress, currently at Chapter 15, bear with us, the code is coming, both Authors are busy, as always, building startups. If you want to help, request to join the project. Keep pull requests to one function at a time. It doesn't have to be just examples from the book, it can be other code snippets from the book, exercises, new functionality or even a "how to use" opencv_contrib functions.
 
 Note, for your interest, included here is a _Docker_ file that
 * Loads Ubuntu 16.04 
