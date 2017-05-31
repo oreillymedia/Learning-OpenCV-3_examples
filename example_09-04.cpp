@@ -3,6 +3,9 @@
 //connected to the sliders in Figure 9-6
 
 #include <opencv2/opencv.hpp>
+#include <GL/gl.h>
+#include <GL/glut.h>
+
 using namespace std;
 
 void on_opengl( void* param ) {
