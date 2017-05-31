@@ -1,6 +1,8 @@
 //Example 9-4. Slightly modified code from the OpenCV documentation that draws a
 //cube every frame; this modified version uses the global variables rotx and roty that are
 //connected to the sliders in Figure 9-6
+// Note: This example needs OpenGL installed on your system. It doesn't build if 
+//       the OpenGL libraries cannot be found.
 #include <GL/gl.h>
 #include <GL/glu.h>
 
