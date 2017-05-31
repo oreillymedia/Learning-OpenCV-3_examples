@@ -10,7 +10,7 @@ using namespace std;
 //
 // Float, 3-channel images
 //
-cv::Mat image; //, rawImage;
+cv::Mat image;
 cv::Mat IavgF, IdiffF, IprevF, IhiF, IlowF;
 cv::Mat tmp, tmp2, mask;
 
@@ -173,8 +173,8 @@ int main( int argc, char** argv) {
 	while(1) {
 		cout << "frame#: " << frame_count << endl;
 		cap >> image;
-		if(frame_count == 0) { AllocateImages(image);}
 		if( !image.data ) exit(1); // Something went wrong, abort
+		if(frame_count == 0) { AllocateImages(image);}
 		accumulateBackground( image );
 		cv::imshow( argv[0], image );
 		frame_count++;
