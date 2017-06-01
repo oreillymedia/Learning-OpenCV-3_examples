@@ -109,5 +109,3 @@ target_link_libraries( example_15-03 ${OpenCV_LIBS} )
 target_link_libraries( example_15-04 ${OpenCV_LIBS} )
 #...
 target_link_libraries( example_16-01 ${OpenCV_LIBS} )
-Contact GitHub API Training Shop Blog About
-© 2017 GitHub, Inc. Terms Privacy Security Status Help
