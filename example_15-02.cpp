@@ -26,8 +26,8 @@ cv::Mat Imaskt;
 
 // Thresholds
 //
-float high_thresh = 15.0;  //scaling the thesholds in backgroundDiff()
-float low_thresh = 13.0;
+float high_thresh = 20.0;  //scaling the thesholds in backgroundDiff()
+float low_thresh = 28.0;
 
 // Counts number of images learned for averaging later
 //
@@ -134,6 +134,7 @@ void showForgroundInRed( char** argv, const cv::Mat &img) {
 		Igray[2] = cv::max( mask, Igray[2] );
 		cv::merge( Igray, rawImage );
 		cv::imshow( argv[0], rawImage );
+		cv::imshow("Segmentation", mask);
 }
 
 void adjustThresholds(char** argv, cv::Mat &img) {
@@ -189,11 +190,13 @@ int main( int argc, char** argv) {
 	
 	// SECOND PROCESSING LOOP (TESTING):
 	//
+	cv::namedWindow("Segmentation", cv::WINDOW_AUTOSIZE ); //For the mask image
 	while((key = cv::waitKey()) != 27 || key == 'q' || key == 'Q'  ) { // esc, 'q' or 'Q' to exit
 		cap >> image;
 		if( !image.data ) exit(0);
 		cout <<  frame_count++ << endl;
 		backgroundDiff( image, mask );
+		cv::imshow("Segmentation", mask);
 
 		// A simple visualization is to write to the red channel
 		//
