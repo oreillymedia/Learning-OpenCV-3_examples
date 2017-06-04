@@ -58,6 +58,7 @@ add_executable( example_15-02 example_15-02.cpp )
 add_executable( example_15-03 example_15-03.cpp )
 add_executable( example_15-04 example_15-04.cpp )
 add_executable( example_15-05 example_15-05.cpp )
+add_executable( example_15-BackgroundSubtractor example_15-BackgroundSubtractor.cpp )
 #...
 add_executable( example_16-01 example_16-01.cpp )
 
@@ -109,5 +110,6 @@ target_link_libraries( example_15-02 ${OpenCV_LIBS} )
 target_link_libraries( example_15-03 ${OpenCV_LIBS} )
 target_link_libraries( example_15-04 ${OpenCV_LIBS} )
 target_link_libraries( example_15-05 ${OpenCV_LIBS} )
+target_link_libraries( example_15-BackgroundSubtractor ${OpenCV_LIBS} )
 #...
 target_link_libraries( example_16-01 ${OpenCV_LIBS} )
