@@ -7,12 +7,14 @@ FROM ubuntu:16.04
 # Running this docker to set up a shared directory and display with the host:
 #
 # To newly create and build this docker image:
-# BUILD docker build -t <container_name> .
+# To build: 
+# $ docker build -t <container_name> .
 #
 # To run the image, or run it again retaining its state but also
 #    exporting display from the container and
 #    sharing a directory between host and container:
-# RUN docker run  -it  -e DISPLAY=$DISPLAY  -v /tmp/.X11-unix:/tmp/.X11-unix  -v /<path_to_a host_directory>/<directory_on_host>/:/<directory_path/name>/  <container_name>
+# to run: 
+# $ docker run  -it  -e DISPLAY=$DISPLAY  -v /tmp/.X11-unix:/tmp/.X11-unix  -v /<path_to_a host_directory>/<directory_on_host>/:/<directory_path/name>/  <container_name>
 #
 ########################################################################
 # This is a docker file which will, from scratch:
