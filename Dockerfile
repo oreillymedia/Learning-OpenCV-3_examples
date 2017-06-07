@@ -13,7 +13,7 @@ FROM ubuntu:16.04
 # To run the image, or run it again retaining its state but also
 #    exporting display from the container and
 #    sharing a directory between host and container:
-# to run: 
+# To run: 
 # $ docker run  -it  -e DISPLAY=$DISPLAY  -v /tmp/.X11-unix:/tmp/.X11-unix  -v /<path_to_a host_directory>/<directory_on_host>/:/<directory_path/name>/  <container_name>
 #
 ########################################################################
