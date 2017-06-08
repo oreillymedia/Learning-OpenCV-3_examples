@@ -6,7 +6,8 @@ FROM ubuntu:16.04
 ########################################################################
 # Running this docker to set up a shared directory and display with the host:
 #
-# To newly create and build this docker image:
+# To newly create and build this docker image, create a directory <container_name>;
+# Copy this Dockerfile into that directory. cd to that directory and:
 # To build: 
 # $ docker build -t <container_name> .
 #
