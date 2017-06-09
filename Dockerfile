@@ -6,16 +6,27 @@ FROM ubuntu:16.04
 ########################################################################
 # Running this docker to set up a shared directory and display with the host:
 #
-# To newly create and build this docker image, create a directory <container_name>;
-# Copy this Dockerfile into that directory. cd to that directory and:
-# To build: 
-# $ docker build -t <container_name> .
+# To newly create and build this docker image:
+# ============================================
 #
-# To run the image, or run it again retaining its state but also
-#    exporting display from the container and
+# Create a directory <container_name>: 
+#    $ mkdir <container_name>
+# Copy this Dockerfile into that directory:
+#    cp Dockerfile <container_name>/.
+# Move to that directory:
+#    $ cd <container_name>
+# To build the docker file (might have to run with sudo 
+#    $ sudo docker build -t <container_name> .
+#
+# To run the image, or run it again retaining its state 
+# =====================================================
+#    but also exporting display from the container and
 #    sharing a directory between host and container:
-# To run: 
-# $ docker run  -it  -e DISPLAY=$DISPLAY  -v /tmp/.X11-unix:/tmp/.X11-unix  -v /<path_to_a host_directory>/<directory_on_host>/:/<directory_path/name>/  <container_name>
+#
+# Allow other processes to share the display:
+#    $ xhost +    #Allows or other processes to capture (show) the display
+# Now run the docker (Usually $DISPLAY is :0) -- you may need sudo privalage
+#    $ sudo docker run  -it  -e DISPLAY=$DISPLAY  -v /tmp/.X11-unix:/tmp/.X11-unix  -v /<path_to_a host_directory>/<directory_on_host>/:/<directory_path/name>/  <container_name>
 #
 ########################################################################
 # This is a docker file which will, from scratch:
