@@ -25,8 +25,10 @@ FROM ubuntu:16.04
 #
 # Allow other processes to share the display:
 #    $ xhost +    #Allows or other processes to capture (show) the display
-# Now run the docker (Usually $DISPLAY is :0) -- you may need sudo privalage
-#    $ sudo docker run  -it  -e DISPLAY=$DISPLAY  -v /tmp/.X11-unix:/tmp/.X11-unix  -v /<path_to_a host_directory>/<directory_on_host>/:/<directory_path/name>/  <container_name>
+# Now run the docker (Usually $DISPLAY is :0) and allow use of the camera -- you may need sudo privalage
+#    $ sudo docker run  -it  -e DISPLAY=$DISPLAY  -v /tmp/.X11-unix:/tmp/.X11-unix \
+#                       --device /dev/video0 \
+#                       -v /<path_to_a host_directory>/<directory_on_host>/:/<directory_path/name>/  <container_name>
 #
 ########################################################################
 # This is a docker file which will, from scratch:
