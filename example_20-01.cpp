@@ -10,10 +10,12 @@ static void help(char* argv[]) {
             " of cluster centers and uses kmeans to move those cluster centers to their\n"
             " representative location\n"
             "Usage:\n"
-         << argv[0] << "\n" << endl;
+         << argv[0] << "\n\n" 
+         << "ESC or 'q' or 'Q' to quit\n\n"<< endl;
 }
 
 int main(int argc, char** argv) {
+	help(argv);
     const int MAX_CLUSTERS = 5;
     cv::Scalar colorTab[] = {
         cv::Scalar( 0, 0, 255 ),

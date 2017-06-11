@@ -19,15 +19,16 @@ const cv::Scalar colorTab[] = {
 static void help(char* argv[]) {
     cout << "\nThis program demonstrates using the Mahalanobis distance for classification.\n"
             " It generates an image with random points, uses kmeans clustering.\n"
-            " And then uses the Mahalanobis distance for classification.\n"
+            " And then uses the Mahalanobis distance for classification of new points (colors) .\n"
             "Usage:\n"
-         << argv[0] << "\n" << endl;
+         << argv[0] << "\n\n" 
+         << "ESC to quit\n\n"<< endl;
 }
 int main(int argc, char** argv) {
     cv::Mat img(500, 500, CV_8UC3, cv::Scalar::all(0));
-
     cv::Mat points(SAMPLE_COUNT, 1, CV_32FC2);
     cv::RNG rng(time(NULL));
+    help(argv);
     rng.fill(points, cv::RNG::UNIFORM, cv::Scalar(0, 0), cv::Scalar(img.cols, img.rows));
 
     cv::Mat labels;
