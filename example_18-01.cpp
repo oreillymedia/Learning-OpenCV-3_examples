@@ -1,6 +1,9 @@
 // Example 18-1. Reading a chessboard’s width and height, reading and collecting
 // the
 // requested number of views, and calibrating the camera
+//
+// **GARY WILL MODIFY THIS TO ALSO READ FROM DISK**
+//
 #include <opencv2/opencv.hpp>
 #include <iostream>
 using namespace std;
