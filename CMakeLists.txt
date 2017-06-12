@@ -64,6 +64,7 @@ add_executable( example_17-01 example_17-01.cpp )
 add_executable( example_18-01 example_18-01.cpp )
 add_executable( example_20-01 example_20-01.cpp )
 add_executable( example_20-02 example_20-02.cpp )
+add_executable( example_21-01 example_21-01.cpp )
 #...
 
 target_link_libraries( example_02-01 ${OpenCV_LIBS} )
@@ -120,4 +121,5 @@ target_link_libraries( example_17-01 ${OpenCV_LIBS} )
 target_link_libraries( example_18-01 ${OpenCV_LIBS} )
 target_link_libraries( example_20-01 ${OpenCV_LIBS} )
 target_link_libraries( example_20-02 ${OpenCV_LIBS} )
+target_link_libraries( example_21-01 ${OpenCV_LIBS} )
 #...
