@@ -1,65 +1,3 @@
-
-Please sign in to a Gmail account
-connected to SalesforceIQ 
-in order to view contact details
-or, Log Out of SalesforceIQ.
-
-Attachment Bradski Residence P9 Gary.pdf successfully uploaded and added.Conversation opened. 1 unread message.
-
-Skip to content
-Using Gmail with screen readers
-4
-Search
-
-
-
-Gmail
-COMPOSE
-Labels
-Inbox (17,079)
-Important
-Sent Mail
-Drafts (1)
-Spam (186)
-Trash
-Categories
-Book
-Deleted Messages
-GSOC_2012 (51)
-GSoC_lists (2,529)
-GSoC2013
-Intel
-OpenCV
-still trying
-More 
-Hangouts
-
- 
- 
- 
-  More 
-1 of 65,455  
- 
-Print all In new window
-files 
-Inbox
-x 
-
-Gary Bradski <garybradski@gmail.com>
-Attachments1:33 PM (4 minutes ago)
-
-to me 
-3 Attachments 
- 
-	
-Click here to Reply or Forward
-29.13 GB (29%) of 100 GB used
-Manage
-Terms - Privacy
-Last account activity: 1 minute ago
-Open in 2 other locations  Details
-
-
 //Exercises at end of Chapter 5
 // 1-6
 #include <opencv2/opencv.hpp>
@@ -211,8 +149,4 @@ int main( int argc, const char** argv )
 	cout << "6" << endl;
 	waitKey(-1); //Wait here until any key pressed
 	return 0;
-
 }
-Exercises_5.cpp
-Open with
-Displaying CMakeLists.txt.

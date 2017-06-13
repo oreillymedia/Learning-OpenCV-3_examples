@@ -2,7 +2,7 @@
 // the
 // requested number of views, and calibrating the camera
 //
-// **GARY WILL MODIFY  THIS TO ALSO READ FROM DISK**
+// **GARY WILL MODIFY THIS TO ALSO READ FROM DISK**
 //
 #include <opencv2/opencv.hpp>
 #include <iostream>
