@@ -1,16 +1,29 @@
-//Exercises 5
-#include "stdafx.h"
-#include <opencv2/core/utility.hpp>
-#include "opencv2/imgproc.hpp"
-#include "opencv2/imgcodecs.hpp"
-#include "opencv2/highgui.hpp"
+//Exercises at end of Chapter 5
+// 1-6
+#include <opencv2/opencv.hpp>
+#include <iostream>
 
 using namespace cv;
 using namespace std;
 
+void help(const char **argv) {
+  cout << "\n\n"
+   << "This program solves the Exercises at the end of Chapter 5\n"
+   << "Call:\n"
+   << argv[0] << " <path/image_name>\n\n"
+   << "For example: ./" << argv[0] << " ../faces.png\n"
+   << endl;
+}
+
+
 
 int main( int argc, const char** argv )
 {
+	help(argv);
+	if(argc < 2) {
+		cout << "\nERROR: You had too few parameters.\n" << endl;
+		return -1;
+	}
 	/************************************************************************/
 	/* 1.  This  exercise  will  accustom  you  to  the  idea  of  many  functions  taking  matrix
 	types.  Create  a  two-dimensional  matrix  with  three  channels  of  type  byte  with
@@ -45,6 +58,7 @@ int main( int argc, const char** argv )
 		}
 	}
 	cv::imshow("execrise 2",m2);
+
 	/************************************************************************/
 	/* 3.  Create a three-channel RGB image of size 100 × 100. Clear it. Use pointer arith‐
 	metic to draw a green square between (20, 5) and (40, 20).                                                                     */
@@ -62,6 +76,7 @@ int main( int argc, const char** argv )
 		}
 	}
 	cv::imshow("execrise 3",m3);
+
 	/************************************************************************/
 	/* 4.  Practice using region of interest (ROI). Create a 210 × 210 single-channel byte
 	image and zero it. Within the image, build a pyramid of increasing values using  
@@ -78,6 +93,7 @@ int main( int argc, const char** argv )
 		
 	}
 	cv::imshow("execrise 4",m4);
+
 	/************************************************************************/
 	/* 5.  Use  multiple  headers  for  one  image.  Load  an  image  that  is  at  least  100  ×  100.
 	Create two additional headers that are ROIs where width = 20 and the height =
@@ -91,6 +107,7 @@ int main( int argc, const char** argv )
 	bitwise_not(roi1,roi1);
 	bitwise_not(roi2,roi2);
 	cv::imshow("execrise 5",m5);
+
 	/************************************************************************/
 	/* 6.  Create a mask using cv::compare(). Load a real image. Use cv::split() to split
 	the image into red, green, and blue images.
@@ -129,7 +146,7 @@ int main( int argc, const char** argv )
 	// f
 	cv::subtract(green,thresh/2,green,clone2);
 	imshow("execrise 6",clone2);
-	waitKey();
+	cout << "6" << endl;
+	waitKey(-1); //Wait here until any key pressed
 	return 0;
-
 }
