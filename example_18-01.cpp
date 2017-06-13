@@ -1,10 +1,15 @@
 // Example 18-1. Reading a chessboard’s width and height, reading and collecting
 // the
 // requested number of views, and calibrating the camera
+//
+// **GARY WILL MODIFY  THIS TO ALSO READ FROM DISK**
+//
 #include <opencv2/opencv.hpp>
 #include <iostream>
+
 using namespace std;
-void help(char **argv) { // todo rewrite this
+
+void help(char **argv) {
   cout << "\n\n"
        << "Example 18-1:\nReading a chessboard’s width and height,\n"
        << "              reading and collecting the requested number of views,\n" 

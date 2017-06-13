@@ -1,16 +1,91 @@
-//Exercises 5
-#include "stdafx.h"
-#include <opencv2/core/utility.hpp>
-#include "opencv2/imgproc.hpp"
-#include "opencv2/imgcodecs.hpp"
-#include "opencv2/highgui.hpp"
+
+Please sign in to a Gmail account
+connected to SalesforceIQ 
+in order to view contact details
+or, Log Out of SalesforceIQ.
+
+Attachment Bradski Residence P9 Gary.pdf successfully uploaded and added.Conversation opened. 1 unread message.
+
+Skip to content
+Using Gmail with screen readers
+4
+Search
+
+
+
+Gmail
+COMPOSE
+Labels
+Inbox (17,079)
+Important
+Sent Mail
+Drafts (1)
+Spam (186)
+Trash
+Categories
+Book
+Deleted Messages
+GSOC_2012 (51)
+GSoC_lists (2,529)
+GSoC2013
+Intel
+OpenCV
+still trying
+More 
+Hangouts
+
+ 
+ 
+ 
+  More 
+1 of 65,455  
+ 
+Print all In new window
+files 
+Inbox
+x 
+
+Gary Bradski <garybradski@gmail.com>
+Attachments1:33 PM (4 minutes ago)
+
+to me 
+3 Attachments 
+ 
+	
+Click here to Reply or Forward
+29.13 GB (29%) of 100 GB used
+Manage
+Terms - Privacy
+Last account activity: 1 minute ago
+Open in 2 other locations  Details
+
+
+//Exercises at end of Chapter 5
+// 1-6
+#include <opencv2/opencv.hpp>
+#include <iostream>
 
 using namespace cv;
 using namespace std;
 
+void help(const char **argv) {
+  cout << "\n\n"
+   << "This program solves the Exercises at the end of Chapter 5\n"
+   << "Call:\n"
+   << argv[0] << " <path/image_name>\n\n"
+   << "For example: ./" << argv[0] << " ../faces.png\n"
+   << endl;
+}
+
+
 
 int main( int argc, const char** argv )
 {
+	help(argv);
+	if(argc < 2) {
+		cout << "\nERROR: You had too few parameters.\n" << endl;
+		return -1;
+	}
 	/************************************************************************/
 	/* 1.  This  exercise  will  accustom  you  to  the  idea  of  many  functions  taking  matrix
 	types.  Create  a  two-dimensional  matrix  with  three  channels  of  type  byte  with
@@ -45,6 +120,7 @@ int main( int argc, const char** argv )
 		}
 	}
 	cv::imshow("execrise 2",m2);
+
 	/************************************************************************/
 	/* 3.  Create a three-channel RGB image of size 100 × 100. Clear it. Use pointer arith‐
 	metic to draw a green square between (20, 5) and (40, 20).                                                                     */
@@ -62,6 +138,7 @@ int main( int argc, const char** argv )
 		}
 	}
 	cv::imshow("execrise 3",m3);
+
 	/************************************************************************/
 	/* 4.  Practice using region of interest (ROI). Create a 210 × 210 single-channel byte
 	image and zero it. Within the image, build a pyramid of increasing values using  
@@ -78,6 +155,7 @@ int main( int argc, const char** argv )
 		
 	}
 	cv::imshow("execrise 4",m4);
+
 	/************************************************************************/
 	/* 5.  Use  multiple  headers  for  one  image.  Load  an  image  that  is  at  least  100  ×  100.
 	Create two additional headers that are ROIs where width = 20 and the height =
@@ -91,6 +169,7 @@ int main( int argc, const char** argv )
 	bitwise_not(roi1,roi1);
 	bitwise_not(roi2,roi2);
 	cv::imshow("execrise 5",m5);
+
 	/************************************************************************/
 	/* 6.  Create a mask using cv::compare(). Load a real image. Use cv::split() to split
 	the image into red, green, and blue images.
@@ -129,7 +208,11 @@ int main( int argc, const char** argv )
 	// f
 	cv::subtract(green,thresh/2,green,clone2);
 	imshow("execrise 6",clone2);
-	waitKey();
+	cout << "6" << endl;
+	waitKey(-1); //Wait here until any key pressed
 	return 0;
 
 }
+Exercises_5.cpp
+Open with
+Displaying CMakeLists.txt.
