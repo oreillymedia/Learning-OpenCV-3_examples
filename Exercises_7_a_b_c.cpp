@@ -1,11 +1,23 @@
+//Exercises at end of Chapter 7
+// 1-4
+#include <opencv2/opencv.hpp>
+#include <iostream>
 
-#include "stdafx.h"
 using namespace cv;
 using namespace std;
 
 
+void help(const char **argv) {
+	cout << "\n\n"
+		<< "This program solves the Exercises at the end of Chapter 7\n"
+		<< endl;
+}
+
+
 int main( int argc, const char** argv )
 {
+	help(argv);
+	
 	/************************************************************************/
 	/* 1.  Using the cv::RNG random number generator:
 	a.  Generate and print three floating-point numbers, each drawn from a uniform
@@ -13,7 +25,7 @@ int main( int argc, const char** argv )
 	b.  Generate  and  print  three  double-precision  numbers,  each  drawn  from  a
 	Gaussian distribution centered at 0.0 and with a standard deviation of 1.0.
 	c.  Generate and print three unsigned bytes, each drawn from a uniform distri‐
-	bution from 0 to 255.                                                                     */
+	bution from 0 to 255.                                                                     
 	/************************************************************************/
 	RNG rng = theRNG();
 	// a
@@ -89,8 +101,17 @@ int main( int argc, const char** argv )
 	}
 	f1 = f1/100;
 	f2 = f2/100;
-	f3 = f3/100; //f1~f2~f3
-	
+	f3 = f3/100;
+	/************************************************************************/
+	/* 4.  page 206 at 《leanring Opencv 3.0》                                                            
+	/************************************************************************/
+	Matx32d AX(1, 1,
+		       0, 1,
+		      -1 ,1); 
+	Mat A = static_cast<Mat>(AX);
+	Mat U, W, V;
+	SVD::compute(A, W, U, V);
+
 	waitKey();
 	getchar();
 	return 0;
