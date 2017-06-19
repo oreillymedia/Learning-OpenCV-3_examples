@@ -14,7 +14,7 @@ void help(char **argv) {
        << "Example 18-1:\nReading a chessboard’s width and height,\n"
        << "              reading and collecting the requested number of views,\n" 
        << "              and calibrating the camera\n\n" 
-       << "Call:\n" << argv[0] << " <board_width> <board_height> <number_of_boards> <if_video,_delay_between_framee_capture> <image_scaling_factor>\n\n"
+       << "Call:\n" << argv[0] << " <board_width> <board_height> <number_of_boards> <ms_delay_framee_capture> <image_scaling_factor>\n\n"
        << " * First it reads in checker boards and calibrates itself\n" 
        << " * Then it saves and reloads the calibration matricies\n"
        << " * Then it creates an undistortion map and finaly\n"
@@ -25,7 +25,7 @@ void help(char **argv) {
 int main(int argc, char *argv[]) {
   int n_boards = 0; 		// Will be set by input list
   float image_sf = 0.5f;  	//Image scaling factor
-  float delay = 1.f;
+  int delay = 300;          //300 milisecond delay
   int board_w = 0;
   int board_h = 0;
 
@@ -37,12 +37,10 @@ int main(int argc, char *argv[]) {
 
   board_w = atoi(argv[1]);
   board_h = atoi(argv[2]);
-  n_boards = atoi(argv[3]);
-  if (argc > 4)
-    delay = atof(argv[4]);
-  if (argc > 5)
-    image_sf = atof(argv[5]);
-  int board_n = board_w * board_h;
+  n_boards = atoi(argv[3]); //How many boards to read in.
+  delay = atof(argv[4]);    //delay in miliseconds
+  image_sf = atof(argv[5]);
+  int board_n = board_w * board_h; //Number of corners on the baord
   cv::Size board_sz = cv::Size(board_w, board_h);
   cv::VideoCapture capture(0);
   if (!capture.isOpened()) {
@@ -102,7 +100,7 @@ int main(int argc, char *argv[]) {
     cv::imshow("Calibration", image);
     
     // show in color if we did collect the image
-    if ((cv::waitKey(30) & 255) == 27)
+    if ((cv::waitKey(delay) & 255) == 27)
       return -1;
   }
   
@@ -135,7 +133,7 @@ int main(int argc, char *argv[]) {
   fs["camera_matrix"] >> intrinsic_matrix_loaded;
   fs["distortion_coefficients"] >> distortion_coeffs_loaded;
   cout << "\nintrinsic matrix:" << intrinsic_matrix_loaded;
-  cout << "\ndistortion coefficients: " << distortion_coeffs_loaded << endl;
+  cout << "\ndistortion coefficients: " << distortion_coeffs_loaded << "\n" << endl;
 
   // Build the undistort map which we will use for all
   // subsequent frames.
@@ -148,6 +146,7 @@ int main(int argc, char *argv[]) {
   // Just run the camera to the screen, now showing the raw and
   // the undistorted image.
   //
+  cout << "*****************\nPRESS A KEY TO SEE THE NEXT IMAGE, ESQ TO QUIT\n****************\n" << endl;
   for (;;) {
     cv::Mat image, image0;
     capture >> image0;
@@ -155,8 +154,9 @@ int main(int argc, char *argv[]) {
       break;
     cv::remap(image0, image, map1, map2, cv::INTER_LINEAR, cv::BORDER_CONSTANT,
               cv::Scalar());
+    cv::imshow("Original", image0);
     cv::imshow("Undistorted", image);
-    if ((cv::waitKey(30) & 255) == 27)
+    if ((cv::waitKey(delay) & 255) == 27)
       break;
   }
   return 0;
