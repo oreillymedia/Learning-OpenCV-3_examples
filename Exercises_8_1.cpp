@@ -1,4 +1,4 @@
-//Exercises at end of Chapter 8
+//Exercises_8_1.cpp Exercises at end of Chapter 8
 //1
 #include <opencv2/opencv.hpp>
 #include <iostream>
@@ -12,7 +12,7 @@ void help(const char **argv) {
 		<< "This program solves the Exercise 1 at the end of Chapter 8 \n"
 		<< "Call:\n"
 		<< argv[0] << " <path/video_name>\n\n"
-		<< "For example: ./" << argv[0] << " ../bike.avi\n"
+		<< "For example: ./" << argv[0] << " ../tree.avi\n"
 		<< endl;
 }
 
@@ -38,19 +38,28 @@ int main( int argc, const char** argv )
 	b.  Write  appropriate  text  labels  describing  the  processing  in  each  of  the  three
 	slots.*/
 	/************************************************************************/
-	VideoCapture capture(argv[1]); 
-	if(!capture.isOpened())
+	
+	VideoCapture capture; 
+	if(!capture.open(argv[1])){
+		cout << "Could not open " << argv[1] << endl;
 		return 1;
+	}
 	double rate=capture.get(CV_CAP_PROP_FPS);
-	bool stop(false);
 	Mat MatFrame;
 	Mat MatGray;
 	Mat MatCanny;
 	int delay=1000/rate;
-	while(!stop)
+	cout << "rate = " << rate << ", delay = " << delay << endl;
+	cout << "\nEsq to exit, or let it run out, then any key to release capture and exit.\n" << endl; 
+	int frame_count = 0;
+	while(1)
 	{
-		if(!capture.read(MatFrame))
+		capture >> MatFrame;
+		if( !MatFrame.data ) {
+			cout << "Done with capture" << endl;
 			break;
+		}
+
 		//(1)
 		imshow("Raw Video",MatFrame);
 		//(2)
@@ -75,12 +84,12 @@ int main( int argc, const char** argv )
 		putText(MatAll,"gray video",Point(50+MatFrame.cols,30),CV_FONT_HERSHEY_DUPLEX,1.0f,color);
 		putText(MatAll,"canny video",Point(50+2*MatFrame.cols,30),CV_FONT_HERSHEY_DUPLEX,1.0f,color);
 		imshow("all Video",MatAll);
-		if(waitKey(delay)>=0)
-			stop=true;
+
+		if ((cv::waitKey(delay) & 255) == 27)
+			break;			
 	}
-	capture.release();
 	waitKey();
-	getchar();
+	capture.release();
 	return 0;
 
 }
