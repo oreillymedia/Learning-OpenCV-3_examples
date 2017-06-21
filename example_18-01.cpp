@@ -15,6 +15,8 @@ void help(char **argv) {
        << "              reading and collecting the requested number of views,\n" 
        << "              and calibrating the camera\n\n" 
        << "Call:\n" << argv[0] << " <board_width> <board_height> <number_of_boards> <ms_delay_framee_capture> <image_scaling_factor>\n\n"
+       << "Example:\n./example_18-01 9 6 15 500 0.5\n"
+	   << "\n -- use the checkerboard9x6.png provided\n\n"
        << " * First it reads in checker boards and calibrates itself\n" 
        << " * Then it saves and reloads the calibration matricies\n"
        << " * Then it creates an undistortion map and finaly\n"
@@ -29,7 +31,7 @@ int main(int argc, char *argv[]) {
   int board_w = 0;
   int board_h = 0;
 
-  if (argc < 4 || argc > 6) {
+  if (argc != 6) {
     cout << "\nERROR: Wrong number of input parameters\n";
     help(argv);
     return -1;
