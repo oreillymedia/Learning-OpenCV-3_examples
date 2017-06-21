@@ -5,8 +5,9 @@ This is the example code that accompanies Learning OpenCV 3 by Adrian Kaehler an
   
 ~~In progress May 24, 2017~~
 ~~In progress June 13, 2017~~
+**In progress June 20, 2017**
 
-This code is in progress, currently at ~~Chapter 15~~ Chapter 19 (_~~but missing 19_ want to make 18 also read from disk,~~ and 
+This code is in progress, currently at ~~Chapter 15~~ Chapter 19 (~~but missing 19 want to make 18 also read from disk,~~ and 
     add in a few other functions), bear with us, the code is coming, both Authors are busy, as always, building startups. 
     If you want to help, request to join the project. Keep pull requests to one function at a time. 
     It doesn't have to be just examples from the book, it can be other code snippets from the book, 
@@ -14,9 +15,9 @@ This code is in progress, currently at ~~Chapter 15~~ Chapter 19 (_~~but missing
 
 For default suggestions of how the run the code, it assumes you put your build directory under Learning-OpenCV-3_examples directory. Thus, you
 
-  cd .../Learning-OpenCV-3_examples/build
-  cmake ..
-  make -j
+*  cd .../Learning-OpenCV-3_examples/build
+*  cmake ..
+*  make -j
 
 Note, for your interest, included here is an Ubuntu _Docker_ file that
 * Shares a directory with the host operating system
