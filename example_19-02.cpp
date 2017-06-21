@@ -8,7 +8,8 @@ void help(char *argv[]) {
 			<< "\nCall"
 			<< "\n./example_19-2 <1:board_w> <2:board_h> <3:# of boards> <4:delay capture this many ms between frames> <5:scale the images 0-1>"
 			<< "\n\nExample call:"
-			<< "\n./example_19-2 12 12 20 500 0.5"
+			<< "\n./example_19-2 9 6 20 500 0.5"
+			<< "\n\n -- use the checkerboard9x6.png provided"
 			<< "\n" 
 			<< endl;
 }
@@ -24,7 +25,7 @@ int main(int argc, char *argv[]) {
   int board_h = 0;
 
   // Will be set by input list
-  if (argc < 4 || argc > 6) {
+  if (argc != 6) {
     cout << "\nERROR: Wrong number of input parameters, need 5, got " << argc - 1 << "\n";
     help(argv);
     return -1;
