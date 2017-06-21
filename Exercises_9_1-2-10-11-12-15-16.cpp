@@ -8,7 +8,7 @@ using namespace std;
  
 void help(const char **argv) {
 	cout << "\n\n"
-		<< "This program solves the Exercise 1 at the end of Chapter 9 \n"
+		<< "This program solves the Exercise 1、2、10、11、12、15 and 16 at the end of Chapter 9 \n"
 		<< "Call:\n"
 		<< argv[0] << " <path/image_name>\n\n"
 		<< "For example: ./" << argv[0] << " ../lena.jpg\n"
