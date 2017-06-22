@@ -5,17 +5,36 @@ This is the example code that accompanies Learning OpenCV 3 by Adrian Kaehler an
   
 ~~In progress May 24, 2017~~
 ~~In progress June 13, 2017~~
-**In progress June 20, 2017**
+~~In progress June 20, 2017~~
+In progress June 22, 2017
 
-This code is in progress, currently at ~~Chapter 15~~ Chapter 19 (~~but missing 19 want to make 18 also read from disk,~~ and 
-    add in a few other functions), bear with us, the code is coming, both Authors are busy, as always, building startups. 
-    If you want to help, request to join the project. Keep pull requests to one function at a time. 
-    It doesn't have to be just examples from the book, it can be other code snippets from the book, 
-    **exercises**, new functionality or even a "how to use" opencv_contrib functions.
+**To do:**
+* ~~Chapter 15~~
+* ~~Chapter 16~~
+* ~~Chapter 17~~
+* ~~Chapter 18~~
+* ~~Chapter 19~~
+* ~~Chapter 20~~
+* Chapter 21
+* Chapter 22
+* Submit associated errata for ~~15 16~~ 17 18 19 20 21 22
+* ~~Make sure all headers state~~ what what in the book it relates to
+* ~~Make sure all functions have~~ a help function for how to run them
+* Throw in some bonus material
+  * ~~background subtraction~~
+  * feature detector/descriptors
+  * ~~More mac~~ hine learning(?) ... ongoing!
+  * Some new stuff in opencv_contrib
+  * Some DNN examples(?)
+* ~~Throw in some exercises~~ ... ongoing!
 
 For default suggestions of how the run the code, it assumes you put your build directory under Learning-OpenCV-3_examples directory. Thus, you
 
-*  cd .../Learning-OpenCV-3_examples/build
+Previously, from the Learning-OpenCV-3_examples directory:
+
+*  mkdir build
+   * Then:
+*  cd build
 *  cmake ..
 *  make -j
 
