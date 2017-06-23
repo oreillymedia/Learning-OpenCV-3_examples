@@ -1,3 +1,4 @@
+//Example 4-4. A better way to print a matrix
 #include <opencv2/opencv.hpp>
 #include <iostream>
 
@@ -53,6 +54,14 @@ void calling_function2( void ) {
 
   print_matrix<float>( (cv::SparseMat_<float>*) &sm );
 
+}
+
+void help(** argv) {
+  cout << "\nExample 4-4, a better way to print out a sparse matrix"
+       << "\n             Demonstrates printing of two different sparse matrices"
+       << "\nCall:"
+       << argv[0]
+       << endl;
 }
 
 int main( int argc, char** argv ) {
