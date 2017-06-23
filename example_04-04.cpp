@@ -56,7 +56,7 @@ void calling_function2( void ) {
 
 }
 
-void help(** argv) {
+void help(char** argv) {
   cout << "\nExample 4-4, a better way to print out a sparse matrix"
        << "\n             Demonstrates printing of two different sparse matrices"
        << "\nCall:"
@@ -65,7 +65,7 @@ void help(** argv) {
 }
 
 int main( int argc, char** argv ) {
-
+  help(argv);
   cout <<"Case 1:" <<endl;
   calling_function1();
   cout <<endl;
