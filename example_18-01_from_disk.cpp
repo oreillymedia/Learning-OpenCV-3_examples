@@ -1,3 +1,6 @@
+// Example 18-1. Reading a chessboard’s width and height, reading and collecting
+// the requested number of views, and calibrating the camera
+
 // You need these includes for the function
 // #include <windows.h>  // for windows systems
 #include <dirent.h>     // for linux systems
