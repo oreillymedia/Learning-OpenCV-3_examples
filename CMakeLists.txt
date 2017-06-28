@@ -11,6 +11,15 @@ else()
   include_directories( ${OpenCV_INCLUDE_DIRS} )
 endif()
 
+#########################
+# FOR LEARNING OPENCV 3 #
+#########################
+
+###############
+### COMPILE ###
+###############
+
+# COMPILE EXAMPLES
 add_executable( example_02-01 example_02-01.cpp )
 add_executable( example_02-02 example_02-02.cpp )
 add_executable( example_02-03 example_02-03.cpp )
@@ -27,12 +36,10 @@ add_executable( example_04-02 example_04-02.cpp )
 add_executable( example_04-03 example_04-03.cpp )
 add_executable( example_04-04 example_04-04.cpp )
 add_executable( example_05-01 example_05-01.cpp )
-add_executable( Exercises_5   Exercises_5.cpp   )
 add_executable( example_07-01 example_07-01.cpp )
 add_executable( example_08-01 example_08-01.cpp )
 add_executable( example_08-02 example_08-02.cpp )
 add_executable( example_08-03 example_08-03.cpp )
-add_executable( Exercises_8_1 Exercises_8_1.cpp )
 add_executable( example_09-01 example_09-01.cpp )
 add_executable( example_09-02 example_09-02.cpp )
 add_executable( example_09-03 example_09-03.cpp )
@@ -71,8 +78,20 @@ add_executable( example_19-04 example_19-04.cpp )
 add_executable( example_20-01 example_20-01.cpp )
 add_executable( example_20-02 example_20-02.cpp )
 add_executable( example_21-01 example_21-01.cpp )
-#...
 
+# NOW COMPILE SOME ANSWERS TO EXERCISES:
+add_executable( Exercises_5   Exercises_5.cpp   )
+add_executable( Exercises_7 Exercises_7.cpp )
+add_executable( Exercises_8_1 Exercises_8_1.cpp )
+add_executable( Exercises_9_1-2-10-11-12-15-16 Exercises_9_1-2-10-11-12-15-16.cpp )
+add_executable( Exercises_9_4 Exercises_9_4.cpp ) 
+add_executable( Exercises_9_5 Exercises_9_5.cpp )
+add_executable( Exercises_11-1-2-5-6-7 Exercises_11-1-2-5-6-7.cpp )
+
+################
+###   LINK   ###
+################
+# FIRST LINK EXAMPLES:
 target_link_libraries( example_02-01 ${OpenCV_LIBS} )
 target_link_libraries( example_02-02 ${OpenCV_LIBS} )
 target_link_libraries( example_02-03 ${OpenCV_LIBS} )
@@ -89,12 +108,10 @@ target_link_libraries( example_04-02 ${OpenCV_LIBS} )
 target_link_libraries( example_04-03 ${OpenCV_LIBS} )
 target_link_libraries( example_04-04 ${OpenCV_LIBS} )
 target_link_libraries( example_05-01 ${OpenCV_LIBS} )
-target_link_libraries( Exercises_5   ${OpenCV_LIBS} )
 target_link_libraries( example_07-01 ${OpenCV_LIBS} )
 target_link_libraries( example_08-01 ${OpenCV_LIBS} )
 target_link_libraries( example_08-02 ${OpenCV_LIBS} )
 target_link_libraries( example_08-03 ${OpenCV_LIBS} )
-target_link_libraries( Exercises_8_1 ${OpenCV_LIBS} )
 target_link_libraries( example_09-01 ${OpenCV_LIBS} )
 target_link_libraries( example_09-02 ${OpenCV_LIBS} )
 target_link_libraries( example_09-03 ${OpenCV_LIBS} )
@@ -135,4 +152,12 @@ target_link_libraries( example_19-04 ${OpenCV_LIBS} )
 target_link_libraries( example_20-01 ${OpenCV_LIBS} )
 target_link_libraries( example_20-02 ${OpenCV_LIBS} )
 target_link_libraries( example_21-01 ${OpenCV_LIBS} )
-#...
+
+# NOW LINK EXERCISES 
+target_link_libraries( Exercises_5 ${OpenCV_LIBS} )
+target_link_libraries( Exercises_7 ${OpenCV_LIBS} )
+target_link_libraries( Exercises_8_1 ${OpenCV_LIBS} )
+target_link_libraries( Exercises_9_1-2-10-11-12-15-16 ${OpenCV_LIBS} )
+target_link_libraries( Exercises_9_4 ${OpenCV_LIBS} )
+target_link_libraries( Exercises_9_5 ${OpenCV_LIBS} )
+target_link_libraries( Exercises_11-1-2-5-6-7 ${OpenCV_LIBS} )

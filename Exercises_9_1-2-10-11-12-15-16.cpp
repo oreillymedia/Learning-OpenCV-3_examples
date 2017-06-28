@@ -217,5 +217,5 @@ int main( int argc, const char** argv )
 	cv::minMaxIdx(temp2, &minPixelValue, &maxPixelValue);
 	//c the order is no matter
 	waitKey();
-	return 0
+	return 0;
 }
