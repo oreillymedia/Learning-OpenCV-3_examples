@@ -1,7 +1,27 @@
+// Example 2-11. A complete program to read in a color video and write out the log-polar-
+// transformed video
+
 #include <opencv2/opencv.hpp>
 #include <iostream>
 
-int main( int argc, char* argv[] ) {
+
+void help(char** argv ) {
+	std::cout << "\n"
+	<< "Read in a video, write out a log polar of it\n"
+	<< argv[0] <<" <path/video> <paht/video_output>\n"
+	<< "For example:\n"
+	<< argv[0] << " ../tree.avi ../vout.avi\n"
+	<< std::endl;
+}
+	
+
+int main( int argc, char** argv ) {
+	
+	if (argc != 3) {
+		help(argv);
+		return 0;
+	}
+		
 
   cv::namedWindow( "Example 2-11", cv::WINDOW_AUTOSIZE );
   cv::namedWindow( "Log_Polar", cv::WINDOW_AUTOSIZE );
