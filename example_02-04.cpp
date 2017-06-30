@@ -1,3 +1,6 @@
+//Example 2-4. Adding a trackbar slider to the basic viewer window for moving around
+//within the video file
+
 #include "opencv2/highgui/highgui.hpp"
 #include "opencv2/imgproc/imgproc.hpp"
 #include <iostream>
@@ -18,7 +21,24 @@ void onTrackbarSlide( int pos, void *) {
   g_dontset = 0;
 
 }
+
+
+void help(char** argv ) {
+	std::cout << "\n"
+	<< "2-04: Addeing a trackbar to a basic viewer for moving w/in the video file \n"
+	<< argv[0] <<" <path/video>\n"
+	<< "For example:\n"
+	<< argv[0] << " ../tree.avi\n"
+	<< std::endl;
+}
+	
+
 int main( int argc, char** argv ) {
+	
+	if (argc != 2) {
+		help(argv);
+		return 0;
+	}
 
   cv::namedWindow( "Example 2-4", cv::WINDOW_AUTOSIZE );
 
