@@ -1,3 +1,4 @@
+// Example 4-1. Summation of a multidimensional array, done plane by plane
 #include <opencv2/opencv.hpp>
 #include <iostream>
 
@@ -6,6 +7,10 @@ using namespace std;
 // Summation of a multidimensional array, done plane by plane
 //
 int main( int argc, char** argv ) {
+  
+  cout << "\nExample 4-1. Summation of a multidimensional array, done plane by plane"
+       << "\nCall:\n"
+       << argv[0] << endl;
 
   const int n_mat_size = 5;
   const int n_mat_sz[] = { n_mat_size, n_mat_size, n_mat_size };
