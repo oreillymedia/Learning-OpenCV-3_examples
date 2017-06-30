@@ -1,3 +1,5 @@
+// Example 2-10. The same object can load videos from a camera or a file
+// 
 #include <opencv2/opencv.hpp>
 #include <iostream>
 
