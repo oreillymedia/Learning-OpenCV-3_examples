@@ -1,12 +1,16 @@
-// alphablend <imageA> <image B> <x> <y> <width> <height> <alpha> <beta>
+// Example 8-2. Using cv::FileStorage to create a .yml data file
 //
 #include <opencv2/opencv.hpp>
 #include <time.h>
+#include <iostream>
 
 using namespace std;
 
 int main(int argc, char** argv) {
-
+  
+  cout << "\nExample 8-2. Using cv::FileStorage to create a .yml data file\n"
+      << argv[0] << endl 
+  
   cv::FileStorage fs("test.yml", cv::FileStorage::WRITE);
 
   fs << "frameCount" << 5;
