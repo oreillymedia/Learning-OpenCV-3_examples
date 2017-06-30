@@ -1,4 +1,4 @@
-// alphablend <imageA> <image B> <x> <y> <width> <height> <alpha> <beta>
+// Example 8-1. Unpacking a four-character code to identify a video codec
 //
 //#include <opencv2/opencv.hpp>
 #include <opencv2/core/core.hpp>
@@ -6,8 +6,24 @@
 #include <iostream>
 
 using namespace std;
+void help(char** argv ) {
+	cout << "\n"
+	<< "Example 8-1. Unpacking a four-character code to identify a video codec"
+  << "\nCall:\n"
+	<< argv[0] <<" <path/video>\n"
+	<< "For example:\n"
+	<< argv[0] << " ../tree.avi\n"
+	<< endl;
+}
+	
 
-int main(int argc, char** argv) {
+int main( int argc, char** argv ) {
+	
+	if (argc != 2) {
+		help(argv);
+		return 0;
+	}
+
 
   cv::VideoCapture cap( argv[1] );
 
