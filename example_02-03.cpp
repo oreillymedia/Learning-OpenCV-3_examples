@@ -1,10 +1,26 @@
+// Example 2-3. A simple OpenCV program for playing a video file from disk
+
 #include "opencv2/highgui/highgui.hpp"
 #include "opencv2/imgproc/imgproc.hpp"
 #include <iostream>
 
 using namespace std;
+void help(char** argv ) {
+	std::cout << "\n"
+	<< "2-03: play video from disk \n"
+	<< argv[0] <<" <path/video>\n"
+	<< "For example:\n"
+	<< argv[0] << " ../tree.avi\n"
+	<< std::endl;
+}
+	
 
 int main( int argc, char** argv ) {
+	
+	if (argc != 2) {
+		help(argv);
+		return 0;
+	}
 
   cv::namedWindow( "Example 2-3", cv::WINDOW_AUTOSIZE );
 
@@ -30,7 +46,7 @@ int main( int argc, char** argv ) {
 //      cout <<((c&(0x1<<(31-i)))?1:0);
 //    }
 //      cout <<endl;
-//      cout <<"Breakey: '" <<(int)c <<"'"<<endl;
+//      cout <<"Break key: '" <<(int)c <<"'"<<endl;
 //    if( (signed char)c >= 0 ) {
 //      break;
 //    }
