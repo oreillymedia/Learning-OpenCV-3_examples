@@ -1,11 +1,14 @@
-// alphablend <imageA> <image B> <x> <y> <width> <height> <alpha> <beta>
+// Example 8-3. Using cv::FileStorage to read a .yml file
 //
 #include <opencv2/opencv.hpp>
 
 using namespace std;
 
 int main(int argc, char** argv) {
-
+  cout << "\nExample 8-3. Using cv::FileStorage to read a .yml file"
+       << "\nCall:\n"
+       << argv[0] << endl;
+  
   cv::FileStorage fs2("test.yml", cv::FileStorage::READ);
 
   // first method: use (type) operator on FileNode.
