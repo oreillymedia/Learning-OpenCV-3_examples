@@ -1,3 +1,5 @@
+// In Example 2-9, we show a simple way to read and write pixel values from Example 2-8.
+//2
 #include <opencv2/opencv.hpp>
 
 int main( int argc, char** argv ) {

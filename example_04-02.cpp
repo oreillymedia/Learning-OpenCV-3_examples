@@ -1,3 +1,4 @@
+// Example 4-2. Summation of two arrays using the N-ary operator
 #include <opencv2/opencv.hpp>
 #include <iostream>
 
@@ -7,6 +8,10 @@ using namespace std;
 //
 int main( int argc, char** argv ) {
 
+  cout << "\nExample 4-2. Summation of two arrays using the N-ary operator"
+       << "\nCall:\n"
+       << argv[0] << endl;
+  
   const int n_mat_size = 5;
   const int n_mat_sz[] = { n_mat_size, n_mat_size, n_mat_size };
 

@@ -1,3 +1,5 @@
+// Example 2-7. The Canny edge detector writes its output to a single-channel (grayscale) image
+// 2
 #include <opencv2/opencv.hpp>
 
 int main( int argc, char** argv ) {

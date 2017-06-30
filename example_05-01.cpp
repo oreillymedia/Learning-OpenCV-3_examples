@@ -1,10 +1,31 @@
 // alphablend <imageA> <image B> <x> <y> <width> <height> <alpha> <beta>
 //
-//#include <opencv2/opencv.hpp>
+#include <opencv2/opencv.hpp>
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
+#include <iostream>
 
-int main(int argc, char** argv) {
+using namespace cv;
+using namespace std;
+
+void help(const char **argv) {
+  cout << "\n\n"
+   << "This program alpha blends on image onto another \n"
+   << "Call:\n"
+   << argv[0] << " <imageA> <image B> <x> <y> <width> <height> <alpha> <beta>\n\n"
+   << endl;
+}
+
+
+
+int main( int argc, const char** argv )
+{
+	help(argv);
+	if(argc != 9) {
+		cout << "\nERROR: Wrong # of parameters (9), you had " << argc \n" << endl;
+		return -1;
+	}
+
 
   // Using the first two arguments, open up the image to be copied onto
   // (src1), and the image that will be copied from (src2).
