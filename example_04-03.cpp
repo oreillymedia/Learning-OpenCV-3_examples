@@ -1,3 +1,5 @@
+//Example 4-3. Printing all of the nonzero elements of a sparse array
+
 #include <opencv2/opencv.hpp>
 #include <iostream>
 
@@ -8,6 +10,9 @@ using namespace std;
 // Summation of a multidimensional array, done plane by plane
 //
 int main( int argc, char** argv ) {
+  
+  cout << "\nExample 4-3. Printing all of the nonzero elements of a sparse array"
+       << "\nCall:\n" << argv[0] << endl;
 
   // Create a 10x10 sparse matrix with a few nonzero elements
   //
