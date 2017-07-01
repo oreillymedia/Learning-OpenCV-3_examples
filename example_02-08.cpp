@@ -1,8 +1,26 @@
-// In Example 2-9, we show a simple way to read and write pixel values from Example 2-8.
+// Example 2-8. Combining the pyramid down operator (twice) and the Canny
+// subroutine in a simple image pipeline
 //2
 #include <opencv2/opencv.hpp>
 
+void help(char** argv ) {
+	std::cout << "\n"
+	<< "\nExample 2-8. Combining the pyramid down operator (twice) and the Canny"
+    << "\n             subroutine in a simple image pipeline"
+    << "\nCall:\n"  
+	<< argv[0] <<" <path/image>\n"
+	<< "For example:\n"
+	<< argv[0] << " ../fruits.jpg\n"
+	<< std::endl;
+}
+	
+
 int main( int argc, char** argv ) {
+	
+	if (argc != 2) {
+		help(argv);
+		return 0;
+	}
 
   cv::Mat img_rgb, img_gry, img_cny, img_pyr, img_pyr2;
 
