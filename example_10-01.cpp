@@ -23,14 +23,14 @@ void sum_rgb( const cv::Mat& src, cv::Mat& dst ) {
 	cv::threshold( s, dst, 100, 100, cv::THRESH_TRUNC );
 }
 
-void help() {
-	cout << "Call: ./example_10-03 ../faces.jpg" << endl;
-	cout << "Shows use of alpha blending (addWeighted) and threshold" << endl;
+void help(char ** argv) {
+	cout << "\nExample 10-1. Using cv::threshold() to sum three channels of an image\n" << endl;
+	cout << "Call:\n" << argv[0] << " ../faces.jpg" << endl;
 }
 
 int main(int argc, char** argv) {
-	help();
-	if(argc < 2) { cout << "specify input image" << endl; return -1; }
+	help(argv);
+	if(argc < 2) { cout << "\nSpecify input image" << endl; return -1; }
 
 	// Load the image from the given file name.
 	//

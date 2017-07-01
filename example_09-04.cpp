@@ -58,9 +58,15 @@ void on_trackbar( int, void* ) {
 }
 
 void help(char ** argv) {
-    cout << "Call: " << argv[0] << " <image>" << endl;
-    cout << "Here OpenGL is used to render a cube on top of an image.\n"
-         << "User can rotate the cube with the sliders" <<endl;
+	
+	cout << "\n//Example 9-4. Slightly modified code from the OpenCV documentation that draws a"
+		<< "\n//cube every frame; this modified version uses the global variables rotx and roty that are"
+		<< "\n//connected to the sliders in Figure 9-6"
+		<< "\n// Note: This example needs OpenGL installed on your system. It doesn't build if" 
+		<< "\n//       the OpenGL libraries cannot be found.\n\/"
+		<< "\nCall: " << argv[0] << " <image>\n\n"
+		<< "\nHere OpenGL is used to render a cube on top of an image.\n"
+        << "\nUser can rotate the cube with the sliders\n" <<endl;
 }
 
 int main(int argc, char* argv[])

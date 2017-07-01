@@ -7,10 +7,10 @@ using namespace std;
 
 int main( int argc, char** argv )
 {
-	if(argc != 7) { cout <<
-	"Usage: " <<argv[0] <<" fixed_threshold invert(0=off|1=on) "
+	if(argc != 7) { cout << "\nExample 10-3. Threshold versus adaptive threshold\n"
+	"Usage:\n" <<argv[0] <<" fixed_threshold invert(0=off|1=on) "
 	"adaptive_type(0=mean|1=gaussian) block_size offset image\n"
-	"Example: " <<argv[0] <<" 100 1 0 15 10 ../faces.png\n"; return -1; }
+	"Example:\n" <<argv[0] <<" 100 1 0 15 10 ../faces.png\n"; return -1; }
 
 	// Process command line arguments
 	//

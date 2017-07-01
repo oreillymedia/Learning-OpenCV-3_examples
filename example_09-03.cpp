@@ -25,8 +25,10 @@ void switch_callback( int position, void* ) {
 }
 
 void help(char ** argv) {
-    cout << "Call: " << argv[0] << " <my.avi>" << endl;
-    cout << "Shows putting a pause button in a video; Esc to quit" << endl;
+    cout << "Example 9-3. Using a trackbar to create a “switch” that the user can turn on and off"
+         << "\n this program plays a video and uses the switch to create a pause functionality."
+         << "\n\nCall:\n" << argv[0] << " <path/video_file>"
+		 << "\n\nShows putting a pause button in a video; Esc to quit\n" << endl;
 }
 
 int main( int argc, char** argv ) {

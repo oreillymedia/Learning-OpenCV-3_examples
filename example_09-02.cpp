@@ -24,8 +24,9 @@ void draw_box( cv::Mat& img, cv::Rect box ) {
   );
 }
 void help(char** argv) {
-  std::cout << "Call: " << argv[0] <<
-    " shows how to use a mouse to draw regions in an image. Esc to quit" << std::endl;
+  std::cout << "Example 9-2. Toy program for using a mouse to draw boxes on the screen"
+     << "\nCall:\n" << argv[0] <<
+    "\n\nshows how to use a mouse to draw regions in an image. Esc to quit\n" << std::endl;
 }
 int main( int argc, char** argv ) {
   help(argv);

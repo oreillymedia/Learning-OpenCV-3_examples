@@ -9,7 +9,8 @@ using namespace std;
 int main(int argc, char** argv) {
   
   cout << "\nExample 8-2. Using cv::FileStorage to create a .yml data file\n"
-      << argv[0] << endl;
+      << argv[0] 
+      << "\n\n   output: test.yml\n\n" << endl;
   
   cv::FileStorage fs("test.yml", cv::FileStorage::WRITE);
 
