@@ -1,6 +1,25 @@
+// Example 2-9. Getting and setting pixels in Example 2-8
+
 #include <opencv2/opencv.hpp>
 
+void help(char** argv ) {
+	std::cout << "\n"
+	<< "\nExample 2-9. Getting and setting pixels in Example 2-8"
+    << "\nCall:\n"  
+	<< argv[0] <<" <path/image>\n"
+	<< "For example:\n"
+	<< argv[0] << " ../fruits.jpg\n"
+	<< std::endl;
+}
+	
+
 int main( int argc, char** argv ) {
+	
+	if (argc != 2) {
+		help(argv);
+		return 0;
+	}
+
 
   cv::Mat img_rgb, img_gry, img_cny, img_pyr, img_pyr2;
 

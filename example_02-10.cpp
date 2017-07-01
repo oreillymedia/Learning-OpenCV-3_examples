@@ -3,7 +3,24 @@
 #include <opencv2/opencv.hpp>
 #include <iostream>
 
+void help(char** argv ) {
+	std::cout << "\n"
+	<< "\nxample 2-10. The same object can load videos from a camera or a file"
+    << "\nCall:\n"  
+	<< argv[0] <<" [path/image]\n"
+	<< "\nor, read from camera:\n"
+	<< argv[0]
+	<< "\nFor example:\n"
+	<< argv[0] << " ../tree.avi\n"
+	<< std::endl;
+}
+	
+
 int main( int argc, char** argv ) {
+	
+	help(argv);
+
+
 
   cv::namedWindow( "Example 2-10", cv::WINDOW_AUTOSIZE );
   cv::VideoCapture cap;

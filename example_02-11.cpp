@@ -11,6 +11,7 @@ void help(char** argv ) {
 	<< argv[0] <<" <path/video> <paht/video_output>\n"
 	<< "For example:\n"
 	<< argv[0] << " ../tree.avi ../vout.avi\n"
+	<< "\nThen read it with:\n ./example_02-10 ../vout.avi\n"
 	<< std::endl;
 }
 	
