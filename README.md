@@ -17,9 +17,11 @@ In progress June 22, 2017
 * ~~Chapter 20~~
 * ~~Chapter 21~~
 * ~~Chapter 22~~
+
+Checking Chapters
+~~2,~~ 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, ~~15 16 17 18 19 20 21 22 23~~
+
 * Submit associated errata for ~~15 16~~ 17 18 19 20 21 22
-* ~~Make sure all headers state~~ what what in the book it relates to
-* ~~Make sure all functions have~~ a help function for how to run them
 * Throw in some bonus material
   * ~~background subtraction~~
   * feature detector/descriptors
