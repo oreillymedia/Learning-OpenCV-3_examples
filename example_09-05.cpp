@@ -10,7 +10,7 @@
 using namespace std;
 
 int main( int argc, char* argv[] ) {
-  cout << "\nExample 9-5. An example program ch4_qt.cpp, which takes a single argument"
+  cout << "\n\nExample 9-5. An example program ch4_qt.cpp, which takes a single argument"
        << "\nindicating a video file; that video file will be replayed inside of a Qt object"
        << "\nthat we will define, called QMoviePlayer"
        << "\nCall:\n" << argv[0] << " <path/movie>"

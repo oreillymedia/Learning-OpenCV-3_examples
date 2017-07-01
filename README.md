@@ -6,7 +6,8 @@ This is the example code that accompanies Learning OpenCV 3 by Adrian Kaehler an
 ~~In progress May 24, 2017~~
 ~~In progress June 13, 2017~~
 ~~In progress June 20, 2017~~
-In progress June 22, 2017
+~~In progress June 22, 2017~~
+In progress June 30, 2017
 
 **To do:**
 * ~~Chapter 15~~
@@ -19,7 +20,7 @@ In progress June 22, 2017
 * ~~Chapter 22~~
 
 Checking Chapters
-~~2,~~ 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, ~~15 16 17 18 19 20 21 22 23~~
+~~2, 3, 4, 5, 6, 7, 8, 9, 10, 11,~~ 12, 13, 14, ~~15 16 17 18 19 20 21 22 23~~
 
 * Submit associated errata for ~~15 16~~ 17 18 19 20 21 22
 * Throw in some bonus material

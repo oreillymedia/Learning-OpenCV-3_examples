@@ -26,13 +26,13 @@ void sum_rgb( const cv::Mat& src, cv::Mat& dst ) {
 	s.convertTo(dst, b.type());
 }
 
-void help() {
-	cout << "Call: ./example_10-02 ../faces.jpg" << endl;
-	cout << "Shows an alternative use of alpha blending and threshold" << endl;
+void help(char **argv) {
+	cout << "\nExample 10-2. Alternative method to combine and threshold image planes\n" << endl;
+	cout << "\nCall:\n" << argv[0] << " ../faces.jpg\n" << endl;
 }
 
 int main(int argc, char** argv) {
-	help();
+	help(argv);
 	if(argc < 2) { cout << "specify input image" << endl; return -1; }
 
 	// Load the image from the given file name.
