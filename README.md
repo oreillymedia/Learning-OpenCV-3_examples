@@ -20,13 +20,13 @@ In progress June 30, 2017
 * ~~Chapter 22~~
 
 Checking Chapters
-~~2, 3, 4, 5, 6, 7, 8, 9, 10, 11,~~ 12, 13, 14, ~~15 16 17 18 19 20 21 22 23~~
+~~2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,~~ 14, 15 16 17 18 19 20 21 22 23
 
 * Submit associated errata for ~~15 16~~ 17 18 19 20 21 22
 * Throw in some bonus material
   * ~~background subtraction~~
   * feature detector/descriptors
-  * ~~More mac~~ hine learning(?) ... ongoing!
+  * ~~More mac~~ machine learning(?) ... ongoing!
   * Some new stuff in opencv_contrib
   * Some DNN examples(?)
 * ~~Throw in some exercises~~ ... ongoing!

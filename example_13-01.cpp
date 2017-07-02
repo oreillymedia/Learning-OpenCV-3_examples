@@ -7,7 +7,8 @@ using namespace std;
 
 int main( int argc, char** argv ){
   if(argc != 2) {
-    cout << "Computer Color Histogram\nUsage: " <<argv[0] <<" <imagename>" << endl;
+	  cout << "\n// Example 13-1. Histogram computation and display" << endl;
+    cout << "\nComputer Color Histogram\nUsage: " <<argv[0] <<" <imagename>\n" << endl;
     return -1;
   }
 

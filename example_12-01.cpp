@@ -1,5 +1,6 @@
-// Using cv::dft() and cv::idft() to accelerate the computation of
-// convolutions
+// Example 12-1. Using cv::dft() and cv::idft() to accelerate the computation of
+// convolutions 
+
 
 #include <opencv2/opencv.hpp>
 #include <iostream>
@@ -9,7 +10,9 @@ using namespace std;
 int main(int argc, char** argv) {
 
   if(argc != 2) {
-    cout << "Fourier Transform\nUsage: " <<argv[0] <<" <imagename>" << endl;
+	cout 	<< "\nExample 12-1. Using cv::dft() and cv::idft() to accelerate the"
+			<< "\n computation of convolutions"
+			<< "\nFourier Transform\nUsage: " <<argv[0] <<" <path/imagename>\n" << endl;
     return -1;
   }
 

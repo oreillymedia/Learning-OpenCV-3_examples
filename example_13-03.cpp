@@ -7,9 +7,10 @@ using namespace std;
 
 void help( char** argv ){
   cout << "\n"
-  <<"Example of using matchTemplate(). The call is:\n"
+  <<"\nExample 13-3: using matchTemplate(). The call is:\n"
   <<"\n"
-  <<argv[0] <<" template image_to_be_searched\n"
+  <<argv[0] <<" <template> <image_to_be_searched?\n"
+  << "\nExample:\n" << argv[0] << "../BlueCup.jpg ../adrian.jpg"
   <<"\n"
   <<" This routine will search using all methods:\n"
   <<" cv::TM_SQDIFF 0\n"
@@ -18,7 +19,7 @@ void help( char** argv ){
   <<" cv::TM_CCORR_NORMED 3\n"
   <<" cv::TM_CCOEFF 4\n"
   <<" cv::TM_CCOEFF_NORMED 5\n"
-  <<"\n";
+  <<"\n" << endl;
 }
 
 // Display the results of the matches

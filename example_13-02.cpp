@@ -8,12 +8,15 @@
 using namespace std;
 
 void help( char** argv ){
+	cout << "//\nExample 13-2. Creating signatures from histograms for EMD; note that this code is the"
+		<< "\n// source of the data in Table 13-1, in which the hand histogram is compared in different"
+		<< "\n// lighting conditions\n\n" << endl;
   cout << "\nCall is:\n"
   << argv[0] <<" modelImage0 testImage1 testImage2 badImage3\n\n"
   << "for example: " << argv[0]
-  << " HandIndoorColor.jpg HandOutdoorColor.jpg "
-  << "HandOutdoorSunColor.jpg fruits.jpg\n"
-  << "\n";
+  << " ../HandIndoorColor.jpg ../HandOutdoorColor.jpg "
+  << "../HandOutdoorSunColor.jpg ../fruits.jpg\n"
+  << "\n" << endl;
 }
 
 // Compare 3 images' histograms
