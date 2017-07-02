@@ -33,8 +33,19 @@ static vector<Point> sampleContour( const Mat& image, int n=300 ) {
   }
 }
 
-int main(int argc, char** argv) {
+void help(char** argv) {
+  cout << "\nExample 14-4. Using the shape context distance extractor"
+       << "\nNOTE: See images to try in ../shape_sample/\n"
+       << "\nCall:\n" << argv[0] << " <path/image_1> <path/image2>\n"
+       << "\nExample:\n" << argv[0] << " ../shape1.jpg ../shape2.jpg\n"
+       << endl;
+}
 
+
+int main(int argc, char** argv) {
+  if(argc != 3)
+    cout << "\nERROR: you need 2 parameters, you had " << argc << " parameters.\n" << endl;
+  help(argv);
   string path = "../data/shape_sample/";
   int indexQuery = 1;
 
