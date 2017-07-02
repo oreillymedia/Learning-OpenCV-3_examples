@@ -19,7 +19,7 @@ int main(int argc, char* argv[]) {
   // load image or show help if no image was provided
   //
   if( argc != 2 || (img = cv::imread(argv[1],cv::IMREAD_GRAYSCALE)).empty() ) {
-    cout << "\nExample 14_2 Drawing Contours\nCall is:\n" << argv[0] << " image\n\n";
+    cout << "\nExample 14_2: Drawing Contours\nCall is:\n" << argv[0] << " image\n\n";
     return -1;
   }
 
