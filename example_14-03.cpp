@@ -14,7 +14,7 @@ int main(int argc, char* argv[]) {
   if( argc != 2
   || (img = cv::imread( argv[1], cv::IMREAD_GRAYSCALE )).empty()
   ) {
-    cout << "\nExample 8_3 Drawing Connected componnents\n" \
+    cout << "\nExample 14-3: Drawing labeled connected componnents\n" \
     << "Call is:\n" <<argv[0] <<" image\n\n";
     return -1;
   }
