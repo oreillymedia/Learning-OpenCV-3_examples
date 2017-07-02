@@ -18,7 +18,7 @@ using std::string;
 //
 void detectAndDraw(
         cv::Mat& img,                               // input image
-        cv::Ptr<cv::CascadeClassifier> classifier,  // preloaded classifier
+         cv::Ptr<cv::CascadeClassifier> classifier,  // preloaded classifier
         double scale = 1.3) {                       // resize image by ...
     // Just some pretty colors to draw with
     //
@@ -50,7 +50,6 @@ void detectAndDraw(
 
     // Loop through to found objects and draw boxes around them
     //
-
     int i = 0;
     for (vector<cv::Rect>::iterator r = objects.begin();
             r != objects.end(); r++, ++i) {
@@ -69,23 +68,20 @@ int main(int argc, char** argv) {
     //   - path to .xml classifier file
     //
     if (argc < 3) {
-        cerr << "Error: wrong number of arguments.\n";
-        cerr << "Use:\n" << argv[0] << " <image_file> <xml_classifier_file>\n"
-             << "to run this demo\n\n"
-             << "Example:\n"
-             << argv[0] << " faces.png haarcascade_frontalface_alt.xml\n"
-             << std::endl;
+        cerr << "\nError: wrong number of arguments.\n";
+        cerr 	<< "\nExample 22-1. Detecting and drawing faces\n\n"
+				<< "Use:\n" << argv[0] << " <path/image_file> <path/xml_classifier_file>\n"
+				<< "to run this demo\n\n"
+				<< "Example:\n"
+				<< argv[0] << " ../faces.png ../haarcascade_frontalface_alt.xml\n"
+				<< std::endl;
         exit(1);
     }
-
     string image_file_name = string(argv[1]);
     cv::Mat img = cv::imread(image_file_name, CV_LOAD_IMAGE_COLOR);
-
     string cascade_file_name = string(argv[2]);
     cv::Ptr<cv::CascadeClassifier> cascade(new cv::CascadeClassifier(cascade_file_name));
-
     detectAndDraw(img, cascade);
-
     cv::imshow("Result", img);
     cv::waitKey(0);
 
