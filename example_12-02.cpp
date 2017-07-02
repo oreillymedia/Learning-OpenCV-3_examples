@@ -11,7 +11,8 @@ using namespace std;
 int main(int argc, char** argv) {
 
   if(argc != 2) {
-  cout << "Hough Circle detect\nUsage: " <<argv[0] <<" <imagename>\n" << endl;
+	cout 	<< "\nExample 12-1. Using cv::dft() and cv::idft() to accelerate the computation of convolutions"  
+			<< "\nHough Circle detect\nUsage: " <<argv[0] <<" <path/imagename>\n" << endl;
   return -1;
   }
 
