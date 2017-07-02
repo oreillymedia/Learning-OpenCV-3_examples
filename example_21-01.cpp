@@ -1,3 +1,5 @@
+//Example 21-1. Creating and training a decision tree
+
 #include <opencv2/opencv.hpp>
 #include <stdio.h>
 #include <iostream>
@@ -12,6 +14,7 @@ void help(char **argv) {
        << "    This program demonstrates how to create and a train a \n"
        << "    decision tree using ml library in OpenCV.\n"
        << "Call:\n" << argv[0] << " <csv-file-path>\n\n"
+       << "\nIf you don't enter a file, it defaults to ../mushroom/agaricus-lepiota.data\n"
        << endl;
 }
 
