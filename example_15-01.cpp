@@ -9,8 +9,9 @@ using namespace std;
 
 void help(char** argv ) {
 	cout << "\n"
-		<< "Read out RGB pixel values and store them to disk\nCall:\n"
-		<< argv[0] <<" avi_file\n"
+		<< "Example: 15-1: Read out RGB pixel values and store them to disk\nCall:\n"
+		<< argv[0] <<" <path/video_file>\n"
+		<< "\nExample:\n" << argv[0] << " ../tree.avi"
 		<< "\n This will store to files blines.csv, glines.csv and rlines.csv\n\n"
 		<< endl;
 }
