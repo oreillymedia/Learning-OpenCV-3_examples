@@ -29,7 +29,7 @@ void on_trackbar( int, void* ) {
 int main( int argc, char** argv ) {
   if( argc != 2 || ( g_gray = cv::imread(argv[1], 0)).empty() ) {
     cout << "\nExample 14-1: Find threshold dependent contours\nUsage:\n" <<argv[0]
-         <<"fruits.jpg\n" << endl;
+         <<" ../fruits.jpg\n" << endl;
     return -1;
   }
   cv::namedWindow( "Contours", 1 );

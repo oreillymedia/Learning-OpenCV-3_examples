@@ -33,7 +33,7 @@ void help()
                                                                                     << endl
     << "Usage:"                                                                     << endl
     << "./example_15-BackgroundSubtractor {<#framesTraining> -vid <video filename>|-img <image filename>}\n"  << endl
-    << "for example: ./example_15-BackgroundSubtractor 50 -vid ../video.avi"        << endl
+    << "for example: ./example_15-BackgroundSubtractor 50 -vid ../tree.avi"         << endl
     << "or: ./example_15-BackgroundSubtractor 20 -img /data/images/1.png"           << endl
     << "\n" 																		<< endl
     << "This file demonstrates the MOG2 class, you can go to opencv docs to see"    << endl
@@ -131,6 +131,7 @@ void processVideo(char* videoFilename, int train) {
 */
         //get the input from the keyboard
         if(frame_count >= train) {
+			cout << "\nHit any key to continue\n" << endl;
 			keyboard = waitKey(); //single step with keyboard press in run mode
 		} else {
 			keyboard = waitKey( 10 ); //run automatically in train mode
@@ -195,6 +196,7 @@ void processImages(char* fistFrameFilename, int train) {
         
         //get the input from the keyboard
         if(frame_count >= train) {
+			cout << "\nHit any key to continue\n" << endl;
 			keyboard = waitKey(); //Single step with keyboard press in test mode
 		} else {
 			keyboard = waitKey( 10 ); //Run automatically in train mode
