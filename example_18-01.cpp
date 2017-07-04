@@ -14,7 +14,7 @@ void help(char **argv) {  // todo rewrite this
          << "              reading and collecting the requested number of views,\n" 
          << "              and calibrating the camera\n\n" 
          << "Call:\n" << argv[0] << " <board_width> <board_height> <number_of_boards> <if_video,_delay_between_framee_capture> <image_scaling_factor>\n\n"
-         << "Example:\n./example_18-01 9 6 15 500 0.5\n"
+         << "Example:\n" << argv[0] << " 9 6 15 500 0.5\n"
          << "-- to use the checkerboard9x6.png provided\n\n"
          << " * First it reads in checker boards and calibrates itself\n" 
          << " * Then it saves and reloads the calibration matricies\n"
