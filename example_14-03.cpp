@@ -8,14 +8,16 @@ using namespace std;
 
 int main(int argc, char* argv[]) {
 
-  cv::Mat img, img_edge, labels, img_color, stats;
+  cv::Mat img, img_edge, labels, centroids, img_color, stats;
 
   // load image or show help if no image was provided
-  if( argc != 2
+  if( (argc != 2)
   || (img = cv::imread( argv[1], cv::IMREAD_GRAYSCALE )).empty()
   ) {
-    cout << "\nExample 8_3 Drawing Connected componnents\n" \
-    << "Call is:\n" <<argv[0] <<" image\n\n";
+	cout << "\nERROR: You need 2 parameters, you had " << argc << "\n" << endl;
+    cout << "\nExample 14-3: Drawing labeled connected componnents\n"
+    << "Call is:\n" <<argv[0] <<" <path/image>\n"
+    << "\nExample:\n" << argv[0] << " ../HandIndoorColor.jpg\n" << endl; 
     return -1;
   }
 
@@ -23,8 +25,10 @@ int main(int argc, char* argv[]) {
   cv::imshow("Image after threshold", img_edge);
 
   int i, nccomps = cv::connectedComponentsWithStats (
-  img_edge, labels,
-  stats, cv::noArray()
+	img_edge, 
+	labels,
+	stats, 
+	centroids
   );
   cout << "Total Connected Components Detected: " << nccomps << endl;
 

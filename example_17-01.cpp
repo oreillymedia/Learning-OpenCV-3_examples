@@ -16,7 +16,7 @@ using std::endl;
 
 void help(char** argv ) {
     cout << "\n"
-         << "Example code for using cv::KalmanFilter\n"
+         << "Example 17-1: code for using cv::KalmanFilter\n"
          << argv[0] << "\n\n"
          << "For example:\n"
          << argv[0] <<"\n\n"

@@ -19,7 +19,9 @@ int main(int argc, char* argv[]) {
   // load image or show help if no image was provided
   //
   if( argc != 2 || (img = cv::imread(argv[1],cv::IMREAD_GRAYSCALE)).empty() ) {
-    cout << "\nExample 14_2 Drawing Contours\nCall is:\n" << argv[0] << " image\n\n";
+	  cout << "\nERROR: You need 2 parameters, you had " << argc << "\n" << endl;
+    cout << "\nExample 14_2: Drawing Contours\nCall is:\n" << argv[0] << " <image>\n\n"
+         << "Example:\n" << argv[0] << " ../box.png\n" << endl;
     return -1;
   }
 

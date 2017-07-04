@@ -5,14 +5,16 @@
 #include <opencv2/opencv.hpp>
 
 static const int MAX_CORNERS = 1000;
-
 using std::cout;
 using std::endl;
 using std::vector;
 
-void help(char** argv) {
-    cout << "Call: " << argv[0] << " [image1] [image2]" << endl;
-    cout << "Demonstrates Pyramid Lucas-Kanade optical flow." << endl;
+
+void help( char** argv ) {
+  cout << "\nExample 16-1: Pyramid L-K optical flow example.\n" << endl;
+  cout << "Call: " <<argv[0] <<" [image1] [image2]\n" << endl;
+  cout << "\nExample:\n" << argv[0] << " ../example_16-01-imgA.png ../example_16-01-imgB.png\n" << endl;
+  cout << "Demonstrates Pyramid Lucas-Kanade optical flow.\n" << endl;
 }
 
 int main(int argc, char** argv) {

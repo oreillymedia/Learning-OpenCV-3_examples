@@ -33,8 +33,22 @@ static vector<Point> sampleContour( const Mat& image, int n=300 ) {
   }
 }
 
-int main(int argc, char** argv) {
+void help(char** argv) {
+  cout << "\nExample 14-4. Using the shape context distance extractor"
+       << "\nNOTE: See images to try in ../shape_sample/\n"
+       << "\nCall:\n" << argv[0] << " <path/image_1> <path/image2>\n"
+       << "\nMISSMATCH Example:\n" << argv[0] << "  ../shape_sample/1.png ../shape_sample/3.png\n"
+       << "\MATCH Example:\n" << argv[0] << "  ../shape_sample/3.png ../shape_sample/4.png\n"       
+       << endl;
+}
 
+
+int main(int argc, char** argv) {
+	help(argv);
+  if(argc != 3) {
+    cout << "\nERROR: you need 2 parameters, you had " << argc << " parameters.\n" << endl;
+	return -1;
+  }
   string path = "../data/shape_sample/";
   int indexQuery = 1;
 
@@ -48,6 +62,9 @@ int main(int argc, char** argv) {
   float dis = mysc->computeDistance( c1, c2 );
   cout << "shape context distance between " <<
     argv[1] << " and " << argv[2] << " is: " << dis << endl;
+      cv::imshow("SHAPE #1", img1);
+      cv::imshow("SHAPE #2",img2);
+      cv::waitKey();
 
   return 0;
 

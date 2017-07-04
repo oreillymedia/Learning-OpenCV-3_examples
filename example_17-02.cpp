@@ -45,8 +45,10 @@ int main(int argc, char** argv) {
     // Program expects at least one argument that is path to video file
     //
     if (argc < 2) {
-        cerr << "Use:\n" << argv[0] << " <video_file>\n"
-             << "to run this demo\n";
+        cerr 	<< "\nExample 17-2: Farnback optical flow example\n"
+				<< "Use:\n" << argv[0] << " <path/video_file>\n"
+				<< "Example:\n" << argv[0] << " ../test.avi\n"
+				<< std::endl;
         exit(1);
     }
 
