@@ -85,6 +85,7 @@ RUN cd \
     && cd opencv-3.2.0/build \
     && cmake -DOPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-3.2.0/modules/ .. \
     && make -j8 \
+    && make install \
     && cd ../.. \
     && rm 3.2.0.zip
 
