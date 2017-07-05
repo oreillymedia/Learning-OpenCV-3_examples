@@ -11,6 +11,7 @@
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/features2d.hpp>
 #include <opencv2/xfeatures2d.hpp>
+#include <opencv2/xfeatures2d/nonfree.hpp>
 #include <opencv2/calib3d.hpp>
 #include <opencv2/imgproc.hpp>
 #include <opencv2/core/utility.hpp>
@@ -139,7 +140,7 @@ inline void findKeyPointsHomography(vector<KeyPoint>& kpts1, vector<KeyPoint>& k
 
 int main(int argc, char** argv) {
     // Program expects at least four arguments:
-    //   - descriptors type ("surf", "sink", "orb", "brisk",
+    //   - descriptors type ("surf", "sift", "orb", "brisk",
     //          "kaze", "akaze", "freak", "daisy", "brief").
     //          For "brief", "freak" and "daisy" you also need a prefix
     //          that is either "blob" or "fast" (e.g. "fastbrief", "blobdaisy")
@@ -147,12 +148,12 @@ int main(int argc, char** argv) {
     //   - path to the object image file
     //   - path to the scene image file
     //
-    if (argc < 5) {
-        cerr << "\nError: wrong number of arguments.\n";
+    if (argc != 5) {
+        cerr << "\nError: wrong (you had: " << argc << ") number of arguments (should be 5).\n";
         cerr    << "\nExample 16-2. 2D Feature detectors and 2D Extra Features framework\n\n"
-                << "Use:\n" << argv[0] << "<descriptors_type> <matching_algirthm> "
+                << "Use:\n" << argv[0] << " <descriptors_type> <matching_algirthm> "
                 << "<path/image_file1> <path/image_file2>\n"
-                << "to run this demo\n\n"
+                << "To run this demo\n\n"
                 << "Program expects at least four arguments:\n"
                 << "  - descriptors type (\"surf\", \"sink\", \"orb\", \"brisk\",\n"
                 << "       \"kaze\", \"akaze\", \"freak\", \"daisy\", \"brief\").\n"
@@ -163,8 +164,8 @@ int main(int argc, char** argv) {
                 << "  - path to the object image file\n"
                 << "  - path to the scene image file\n\n"
                 << "Examples:\n"
-                << argv[0] << " surf knn box.png box_in_scene.png\n"
-                << argv[0] << " fastfreak bf box.png box_in_scene.png\n"
+                << argv[0] << " surf knn ../box.png ../box_in_scene.png\n"
+                << argv[0] << " fastfreak bf ../box.png ../box_in_scene.png\n"
                 << std::endl;
         exit(1);
     }
