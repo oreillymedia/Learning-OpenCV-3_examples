@@ -26,11 +26,10 @@ Checking Chapters
 * Submit associated errata for ~~15 16~~ 17 18 19 20 21 22
 * Throw in some bonus material
   * ~~background subtraction~~
-  * feature detector/descriptors
-  * ~~More mac~~ machine learning(?) ... ongoing!
-  * Some new stuff in opencv_contrib
+  * ~~feature detector/descriptors~~
+  * ~~More machine learning~~
   * Some DNN examples(?)
-* ~~Throw in some exercises~~ ... ongoing!
+  * ~~Throw in some exercises~~
 
 For default suggestions of how the run the code, it assumes you put your build directory under Learning-OpenCV-3_examples directory. Thus, you
 
