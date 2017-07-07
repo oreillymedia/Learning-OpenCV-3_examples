@@ -10,7 +10,7 @@ void help(char *argv[]) {
 			<< "\nCall:"
 			<< "\n./example_19-01 <chessboard_width> <chessboard_height> <path/camera_calib_filename> <path/chessboard_image>"
 			<< "\n\nExample:"
-			<< "\n./example_19-01 0 0 ../birdseye/intrinsics.xml ../birdseye\n"
+			<< "\n./example_19-01 12 12 ../birdseye/intrinsics.xml ../birdseye/IMG_0215L.jpg\n"
 			<< "\nPress 'd' for lower birdseye view, and 'u' for higher (it adjusts the apparent 'Z' height), Esc to exit\n" 
 			<< endl;
 }
@@ -115,7 +115,7 @@ int main(int argc, char *argv[]) {
   // LET THE USER ADJUST THE Z HEIGHT OF THE VIEW
   //
   cout << "\nPress 'd' for lower birdseye view, and 'u' for higher (it adjusts the apparent 'Z' height), Esc to exit" << endl;
-  double Z = 25;
+  double Z = 15;
   cv::Mat birds_image;
   for (;;) {
     // escape key stops
