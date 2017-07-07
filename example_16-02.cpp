@@ -1,4 +1,9 @@
 // Example 16-2. 2D Feature detectors and 2D Extra Features framework
+//
+// Note, while this code is free to use commercially, not all the algorithms are. For example
+// sift is patented. If you are going to use this commercially, check out the non-free 
+// algorithms and secure license to use them.
+//
 
 #include <vector>
 #include <iostream>
@@ -166,6 +171,7 @@ int main(int argc, char** argv) {
                 << "Examples:\n"
                 << argv[0] << " surf knn ../box.png ../box_in_scene.png\n"
                 << argv[0] << " fastfreak bf ../box.png ../box_in_scene.png\n"
+                << "\nNOTE: Not all of these methods are free, check licensing conditions!\n\n"
                 << std::endl;
         exit(1);
     }
