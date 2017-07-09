@@ -1,3 +1,4 @@
+// Example 5-1. Complete program to alpha-blend the ROI starting at (0,0) in src2 with the ROI starting at (x,y) in src1
 // alphablend <imageA> <image B> <x> <y> <<alpha> <beta>
 //
 #include <opencv2/opencv.hpp>

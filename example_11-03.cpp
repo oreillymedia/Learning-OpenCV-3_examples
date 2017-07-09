@@ -1,3 +1,4 @@
+// Example 11-3. Log-polar transform example
 // Log-polar transform example.
 // This demonstrates the forward and backward (inverse) log-polar
 // transform.

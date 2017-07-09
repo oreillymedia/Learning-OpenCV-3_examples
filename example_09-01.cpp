@@ -1,4 +1,3 @@
-
 // Example 9-1. Creating a window and displaying an image in that window
 //
 #include <opencv2/opencv.hpp>

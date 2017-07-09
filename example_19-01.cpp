@@ -1,4 +1,4 @@
-//Example 19 - 1. Bird’s - eye view
+//Example 19-1. Bird’s - eye view
 #include <opencv2/opencv.hpp>
 #include <iostream>
     using namespace std;
