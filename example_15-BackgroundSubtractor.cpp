@@ -1,4 +1,4 @@
-//opencv  Modified by Gary Bradski, 6/4/2017
+// EXTRA Example 15-6, using OpenCV's background subtractor class.  Modified by Gary Bradski, 6/4/2017
 #include "opencv2/imgcodecs.hpp"
 #include "opencv2/imgproc.hpp"
 #include "opencv2/videoio.hpp"
