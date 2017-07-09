@@ -24,8 +24,8 @@ Previously, from the `Learning-OpenCV-3_examples` directory:
   make -j
 ```
 
-
-Note, for your interest, included here is an Ubuntu _Docker_ file that
+#### Docker
+For your interest, included here is an Ubuntu _Docker_ file that
 * Shares a directory with the host operating system
 * Shares the first camera between both systems
 * Loads Ubuntu 16.04 
