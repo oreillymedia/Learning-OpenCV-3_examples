@@ -2,7 +2,7 @@
 
 ## INTRO
 
-This is the example code that accompanies Learning OpenCV 3 by Adrian Kaehler and Gary Bradski `([9781491937990](http:*shop.oreilly.com/product/0636920044765.do))`.
+This is the example code that accompanies Learning OpenCV 3 by Adrian Kaehler and Gary Bradski ([9781491937990](http:*shop.oreilly.com/product/0636920044765.do)).
 
 Click the Download Zip button to the right to download example code.
 
@@ -163,33 +163,7 @@ Note, for your interest, included here is an Ubuntu _Docker_ file that
 * stereoData   -- left, right image pairs of checkboards to calibrate and view on
 
 
-
-
-
-
-
-For default suggestions of how the run the code, it assumes you put your build directory under Learning-OpenCV-3_examples directory. Thus, you
-
-Previously, from the Learning-OpenCV-3_examples directory:
-
-*  mkdir build
-   * Then:
-*  cd build
-*  cmake ..
-*  make -j
-
-Note, for your interest, included here is an Ubuntu _Docker_ file that
-* Shares a directory with the host operating system
-* Shares the first camera between both systems
-* Loads Ubuntu 16.04 
-* Loads all dependencies for OpenCV 3.2 and opencv_contrib
-* Loads and builds OpenCV 3.2 and opencv_contrib into a build directory 
-  * executable files end up in opencv-3.2.0/build/bin
-* Git clones the code (and Docker file) for Learning OpenCV 3 and builds it
-  * executable files end up in Learning_OpenCV-3_examples/build
-* To get to the top level directory, just type: `cd`
-
-
+## LINKS:
 Click the Download Zip button to the right to download example code.
 
 Visit the catalog page [here](http:*shop.oreilly.com/product/0636920044765.do).
