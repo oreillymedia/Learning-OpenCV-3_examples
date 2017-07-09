@@ -2,7 +2,7 @@
 
 ## INTRO
 
-This is the example code that accompanies Learning OpenCV 3 by Adrian Kaehler and Gary Bradski (9781491937990).
+This is the example code that accompanies Learning OpenCV 3 by Adrian Kaehler and Gary Bradski `([9781491937990](http:*shop.oreilly.com/product/0636920044765.do))`.
 
 Click the Download Zip button to the right to download example code.
 
@@ -13,9 +13,9 @@ See an error? Report it [here](http:*oreilly.com/catalog/errata.csp?isbn=0636920
 
 ## NOTES
 
-For default suggestions of how the run the code, it assumes you put your build directory under Learning-OpenCV-3_examples directory. Thus, you
+For default suggestions of how the run the code, it assumes you put your build directory under `Learning-OpenCV-3_examples` directory. Thus, you
 
-Previously, from the Learning-OpenCV-3_examples directory:
+Previously, from the `Learning-OpenCV-3_examples` directory:
 
 ```	
   mkdir build
