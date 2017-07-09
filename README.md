@@ -4,15 +4,15 @@
 This is the example code that accompanies Learning OpenCV 3 by Adrian Kaehler and Gary Bradski (9781491937990).
 
 
-**LIST**
+## LIST
 
-SPECIAL FILES:
+### SPECIAL FILES:
 
 * README.md       -- this readme file
 * Dockerfile      -- complete self contained opencv environment using Ubuntu 16-04
 * CMakeLists.txt  -- how to buld everything here 
 
-EXERCISES:
+### EXERCISES:
 
 * Exercises at end of Chapter 5
 * Exercises at end of Chapter 7
@@ -22,7 +22,7 @@ EXERCISES:
 * Exercises_9_5.cpp Exercises at end of Chapter 9
 * Exercises at end of Chapter 11
 
-EXAMPLES:
+### EXAMPLES:
 
 * Example 2-1. A simple OpenCV program that loads an image from disk and displays it
 * Example 2-2. Same as Example 2-1 but employing the “using namespace” directive
@@ -75,13 +75,13 @@ EXAMPLES:
 * Example 15-3. Computing the on and off-diagonal elements of a variance/covariance model
 * Example 15-4. Codebook algorithm implementation
 * Example 15-5. Cleanup using connected components
-* EXTRA Example 15-6, using OpenCV's background subtractor class.  Modified by Gary Bradski, 6/4/2017
+* **EXTRA** Example 15-6, using OpenCV's background subtractor class.  Modified by Gary Bradski, 6/4/2017
 * Example 16-1. Pyramid L-K optical flow
-* EXTRA Example 16-2. 2D Feature detectors and 2D Extra Features framework
+* **EXTRA** Example 16-2. 2D Feature detectors and 2D Extra Features framework
 * Example 17-1. Kalman filter example code
 * Example 17-2. Farneback optical flow example code
 * Example 18-1. Reading a chessboard’s width and height, reading them and calibrating 
-* EXTRA Example 18-1. From disk. Reading a chessboard’s width and height, reading them and calibrating 
+* **EXTRA** Example 18-1. From disk. Reading a chessboard’s width and height, reading them and calibrating 
 * Example 19-1. Bird’s - eye view
 * Example 19-2. Computing the fundamental matrix using RANSAC
 * Example 19-3. Stereo calibration, rectification, and correspondence
@@ -91,7 +91,7 @@ EXAMPLES:
 * Example 21-1. Creating and training a decision tree
 * Example 22-1. Detecting and drawing faces
 
-IMAGES:
+### IMAGES:
 
 * box.png
 * box_in_scene.png
@@ -109,18 +109,18 @@ IMAGES:
 * fruits.jpg
 * stuff.jpg
 
-MOVIES:
+### MOVIES:
 
 * test.avi
 * tree.avi
 
-CLASSIFIERS:
+### CLASSIFIERS:
 
 * haarcascade_frontalcatface.xml           #Cat faces!
 * haarcascade_frontalcatface_extended.xml
 * haarcascade_frontalface_alt.xml
 
-DIRECTORIES:
+### DIRECTORIES:
 
 * birdseye     -- where the images are of checkerboards on the floor
 * build        -- you will make and build things in this directory
@@ -131,33 +131,9 @@ DIRECTORIES:
 
 
 
-* ~~In progress May 24, 2017~~
-* ~~In progress June 13, 2017~~
-* ~~In progress June 20, 2017~~
-* ~~In progress June 22, 2017~~
-* ~~In progress July 02, 2017~~
-* ~~In progress July 03, 2017~~
-
-**To do:**
-* ~~Chapter 15~~
-* ~~Chapter 16~~
-* ~~Chapter 17~~
-* ~~Chapter 18~~
-* ~~Chapter 19~~
-* ~~Chapter 20~~
-* ~~Chapter 21~~
-* ~~Chapter 22~~
-
-Checking Chapters
-~~2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21 22 23~~
 
 * Submit associated errata for ~~15 16~~ 17 18 19 20 21 22
-* Throw in some bonus material
-  * ~~background subtraction~~
-  * ~~feature detector/descriptors~~
-  * ~~More machine learning~~
-  * Some DNN examples(?)
-  * ~~Throw in some exercises~~
+
 
 For default suggestions of how the run the code, it assumes you put your build directory under Learning-OpenCV-3_examples directory. Thus, you
 
