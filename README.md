@@ -13,9 +13,9 @@ See an error? Report it [here](http:*oreilly.com/catalog/errata.csp?isbn=0636920
 
 ## NOTES
 
-For default suggestions of how the run the code, it assumes you put your build directory under `Learning-OpenCV-3_examples` directory. Thus, you
+For default suggestions of how the run the code, it assumes you put your build directory under `Learning-OpenCV-3_examples` directory. 
 
-Previously, from the `Learning-OpenCV-3_examples` directory:
+Thus, from the `Learning-OpenCV-3_examples` directory:
 
 ```	
   mkdir build
