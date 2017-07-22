@@ -93,7 +93,7 @@ static void onMouseClick(int event, int x, int y, int, void*) {
 int main(int argc, char** argv) {
     if (argc != 2) {
         cout << "\nExample 12-4. Using Watershed for image segmentation"
-             << "\n- Use left click on the image to select foreground point"
+             << "\n- Use left click on the image to place marker for the new segment"
              << "\n- Use right clock on the image to perform Watershed"
              << "\n- Press any key to terminate program"
              << "\nUsage: "
