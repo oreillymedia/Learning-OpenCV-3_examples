@@ -96,6 +96,8 @@ For your interest, included here is an Ubuntu _Docker_ file that
 * Example 11-3. Log-polar transform example
 * Example 12-1. Using cv::dft() and cv::idft() to accelerate the computation of
 * Example 12-2. Using cv::HoughCircles() to return a sequence of circles found in a
+* **EXTRA** Example 12-3. Using GrabCut for background removal
+* **EXTRA** Example 12-4. Using GrabCut for background removal
 * Example 13-1. Histogram computation and display
 * Example 13-2. Creating signatures from histograms for EMD; note that this code is the
 * Example 13-3. Template matching
