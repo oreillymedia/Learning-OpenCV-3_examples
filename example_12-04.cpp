@@ -90,15 +90,20 @@ static void onMouseClick(int event, int x, int y, int, void*) {
     }
 }
 
-int main(int argc, char** argv) {
-    if (argc != 2) {
-        cout << "\nExample 12-4. Using Watershed for image segmentation"
+void help(char** argv) {
+       cout << "\nExample 12-4. Using Watershed for image segmentation"
              << "\n- Use left click on the image to place marker for the new segment"
              << "\n- Use right clock on the image to perform Watershed"
              << "\n- Press any key to terminate program"
              << "\nUsage: "
-             << argv[0] << " <path/imagename>\n" << endl;
-        return -1;
+             << argv[0] << " <path/imagename>\n" 
+             << "\nExample:\n" << argv[0] << " ../stuff.jpg\n" << endl;	
+}
+
+int main(int argc, char** argv) {
+	help(argv);
+    if (argc != 2) {
+         return -1;
     }
 
     img = cv::imread(std::string(argv[1]), CV_LOAD_IMAGE_COLOR);

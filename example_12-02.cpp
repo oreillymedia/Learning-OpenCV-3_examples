@@ -12,10 +12,15 @@ using std::cout;
 using std::endl;
 using std::vector;
 
-int main(int argc, char** argv) {
-    if (argc != 2) {
+void help(char** argv) {
         cout  << "\nExample 12-1. Using cv::dft() and cv::idft() to accelerate the computation of convolutions"  
-              << "\nHough Circle detect\nUsage: " << argv[0] <<" <path/imagename>\n" << endl;
+              << "\nHough Circle detect\nUsage: " << argv[0] <<" <path/imagename>\n" 
+              << "Example:\n" << argv[0] << " ../stuff.jpg\n" << endl;
+}
+
+int main(int argc, char** argv) {
+	help(argv);
+    if (argc != 2) {
         return -1;
     }
 
