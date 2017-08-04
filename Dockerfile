@@ -30,6 +30,13 @@ FROM ubuntu:16.04
 #                       --device /dev/video0 \
 #                       -v /<path_to_a host_directory>/<directory_on_host>/:/<directory_path/name>/  <container_name>
 #
+# =======================================================
+# Handy docker commands:
+# List all the docker images
+#    $ sudo docker ps -a  
+# If the docker image is stopped (otherwise can skip the first command below if not stopped)
+#    $ sudo docker start <container ID from ps -a above>
+#    $ sudo docker attach <container ID from ps -a above>
 ########################################################################
 # This is a docker file which will, from scratch:
 #
