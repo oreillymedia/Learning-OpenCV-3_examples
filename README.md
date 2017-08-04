@@ -54,6 +54,8 @@ For your interest, included here is an Ubuntu _Docker_ file that
 * Exercises_9_4.cpp Exercises at end of Chapter 9
 * Exercises_9_5.cpp Exercises at end of Chapter 9
 * Exercises at end of Chapter 11
+* Exercises_13_1-2-11.cpp	Exercises for Chapter 13
+* Exercises_13_9.cpp	
 
 ### EXAMPLES:
 
